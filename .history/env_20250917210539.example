@@ -1,0 +1,18 @@
+# Database
+DATABASE_URL="postgresql://username:password@localhost:5432/controlata_db"
+
+# JWT
+JWT_SECRET="your-super-secret-jwt-key-here"
+JWT_EXPIRES_IN="7d"
+
+# Server
+PORT=8080
+NODE_ENV="development"
+
+# File Upload
+UPLOAD_PATH="./uploads"
+MAX_FILE_SIZE=5242880
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
