@@ -26,23 +26,19 @@ const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 
-// Инициализируем Prisma асинхронно
-let prisma = {
-  user: { findUnique: () => Promise.resolve(null) },
-  $disconnect: () => Promise.resolve()
-};
-
-// Пытаемся подключиться к Prisma в фоне
-(async () => {
-  try {
-    const { PrismaClient } = require('@prisma/client');
-    prisma = new PrismaClient();
-    console.log('✅ Prisma подключен успешно');
-  } catch (error) {
-    console.error('❌ Ошибка подключения Prisma:', error.message);
-    console.log('⚠️ Продолжаем работу без базы данных');
-  }
-})();
+// Инициализируем Prisma с обработкой ошибок
+let prisma;
+try {
+  prisma = new PrismaClient();
+  console.log('✅ Prisma подключен успешно');
+} catch (error) {
+  console.error('❌ Ошибка подключения Prisma:', error.message);
+  // Создаем заглушку для работы без базы данных
+  prisma = {
+    user: { findUnique: () => Promise.resolve(null) },
+    $disconnect: () => Promise.resolve()
+  };
+}
 
 // Security middleware
 app.use(helmet({
@@ -112,26 +108,6 @@ app.get('/health', (req, res) => {
     status: 'OK', 
     timestamp: new Date().toISOString(),
     uptime: process.uptime()
-  });
-});
-
-// Test API route
-app.get('/api', (req, res) => {
-  res.json({ 
-    message: 'API работает!',
-    timestamp: new Date().toISOString(),
-    routes: [
-      '/api/auth',
-      '/api/users', 
-      '/api/picture-sizes',
-      '/api/materials',
-      '/api/orders',
-      '/api/pictures',
-      '/api/incomes',
-      '/api/expenses',
-      '/api/reports',
-      '/api/dashboard'
-    ]
   });
 });
 

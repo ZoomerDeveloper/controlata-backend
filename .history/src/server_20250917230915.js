@@ -115,26 +115,6 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Test API route
-app.get('/api', (req, res) => {
-  res.json({ 
-    message: 'API работает!',
-    timestamp: new Date().toISOString(),
-    routes: [
-      '/api/auth',
-      '/api/users', 
-      '/api/picture-sizes',
-      '/api/materials',
-      '/api/orders',
-      '/api/pictures',
-      '/api/incomes',
-      '/api/expenses',
-      '/api/reports',
-      '/api/dashboard'
-    ]
-  });
-});
-
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', authMiddleware, userRoutes);
