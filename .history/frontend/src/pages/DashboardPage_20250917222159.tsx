@@ -68,6 +68,8 @@ const DashboardPage: React.FC = () => {
     return <Alert severity="info">Нет данных для отображения</Alert>;
   }
 
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
+
   return (
     <Box>
       <Typography variant="h4" gutterBottom>

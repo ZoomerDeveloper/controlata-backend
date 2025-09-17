@@ -17,8 +17,10 @@ import {
   TrendingUp,
   TrendingDown,
   ShoppingCart,
+  Image,
   Warning,
   AttachMoney,
+  Assessment,
 } from '@mui/icons-material';
 import {
   LineChart,
@@ -28,6 +30,11 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
 } from 'recharts';
 import api from '../services/api';
 import { DashboardStats } from '../types';
@@ -67,6 +74,8 @@ const DashboardPage: React.FC = () => {
   if (!stats) {
     return <Alert severity="info">Нет данных для отображения</Alert>;
   }
+
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
   return (
     <Box>

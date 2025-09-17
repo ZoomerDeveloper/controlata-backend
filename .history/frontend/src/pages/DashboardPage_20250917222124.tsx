@@ -17,8 +17,10 @@ import {
   TrendingUp,
   TrendingDown,
   ShoppingCart,
+  Image,
   Warning,
   AttachMoney,
+  Assessment,
 } from '@mui/icons-material';
 import {
   LineChart,
@@ -28,6 +30,11 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
 } from 'recharts';
 import api from '../services/api';
 import { DashboardStats } from '../types';
@@ -68,6 +75,8 @@ const DashboardPage: React.FC = () => {
     return <Alert severity="info">Нет данных для отображения</Alert>;
   }
 
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
+
   return (
     <Box>
       <Typography variant="h4" gutterBottom>
@@ -94,7 +103,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Box display="flex" alignItems="center">
@@ -112,7 +121,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Box display="flex" alignItems="center">
@@ -130,7 +139,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Box display="flex" alignItems="center">
@@ -149,7 +158,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* График доходов и расходов */}
-        <Grid item xs={12} md={8}>
+        <Grid xs={12} md={8}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -174,7 +183,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Статусы заказов */}
-        <Grid item xs={12} md={4}>
+        <Grid xs={12} md={4}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -199,7 +208,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Материалы с низким остатком */}
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -230,7 +239,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Топ клиенты */}
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
