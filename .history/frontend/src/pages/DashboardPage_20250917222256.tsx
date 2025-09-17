@@ -94,7 +94,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Box display="flex" alignItems="center">
@@ -112,7 +112,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Box display="flex" alignItems="center">
@@ -130,7 +130,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Box display="flex" alignItems="center">
@@ -149,7 +149,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* График доходов и расходов */}
-        <Grid xs={12} md={8}>
+        <Grid item xs={12} md={8}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -174,7 +174,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Статусы заказов */}
-        <Grid xs={12} md={4}>
+        <Grid item xs={12} md={4}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -199,7 +199,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Материалы с низким остатком */}
-        <Grid xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -230,7 +230,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Топ клиенты */}
-        <Grid xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
