@@ -137,21 +137,13 @@ app.use(errorHandler);
 // Graceful shutdown
 process.on('SIGINT', async () => {
   console.log('Получен SIGINT. Закрытие сервера...');
-  try {
-    await prisma.$disconnect();
-  } catch (error) {
-    console.error('Ошибка при отключении Prisma:', error.message);
-  }
+  await prisma.$disconnect();
   process.exit(0);
 });
 
 process.on('SIGTERM', async () => {
   console.log('Получен SIGTERM. Закрытие сервера...');
-  try {
-    await prisma.$disconnect();
-  } catch (error) {
-    console.error('Ошибка при отключении Prisma:', error.message);
-  }
+  await prisma.$disconnect();
   process.exit(0);
 });
 
