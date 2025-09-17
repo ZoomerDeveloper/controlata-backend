@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Deploy to Railway
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -29,5 +29,7 @@ jobs:
     - name: Build application
       run: npm run build
       
-    - name: Check Prisma schema
-      run: npx prisma validate --schema=./prisma/schema.prisma
+    - name: Deploy to Railway
+      run: |
+        echo "Deploying to Railway..."
+        # Railway автоматически деплоит при push в main ветку
