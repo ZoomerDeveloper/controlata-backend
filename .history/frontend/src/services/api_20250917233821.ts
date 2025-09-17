@@ -131,7 +131,7 @@ class ApiService {
     return response.data;
   }
 
-  async updateMaterial(id: string, data: Partial<Material>): Promise<{ data: Material }> {
+  async updateMaterial(id: string, data: Partial<Material>): Promise<{ material: Material }> {
     const response = await this.api.put(`/materials/${id}`, data);
     return response.data;
   }

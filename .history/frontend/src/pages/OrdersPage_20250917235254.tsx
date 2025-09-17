@@ -37,8 +37,7 @@ import {
   CheckCircleOutlined,
   ClockCircleOutlined,
   CloseCircleOutlined,
-  TruckOutlined,
-  DollarOutlined
+  TruckOutlined
 } from '@ant-design/icons';
 import dayjs from 'dayjs';
 import api from '../services/api';

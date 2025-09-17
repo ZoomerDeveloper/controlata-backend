@@ -144,7 +144,7 @@ const DashboardPage: React.FC = () => {
         <Col xs={24} md={8}>
           <Card title="Статусы заказов">
             <Space direction="vertical" style={{ width: '100%' }}>
-              {stats?.orders?.byStatus?.map((status) => (
+              {stats.orders.byStatus.map((status) => (
                 <div key={status.status} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <Tag color={status.status === 'COMPLETED' ? 'success' : 'default'}>
                     {status.status}
@@ -168,7 +168,7 @@ const DashboardPage: React.FC = () => {
           >
             {stats.analytics?.lowStockMaterials?.length > 0 ? (
               <List
-                dataSource={stats?.analytics?.lowStockMaterials || []}
+                dataSource={stats.analytics.lowStockMaterials}
                 renderItem={(material) => (
                   <List.Item>
                     <List.Item.Meta
@@ -188,9 +188,9 @@ const DashboardPage: React.FC = () => {
         {/* Топ клиенты */}
         <Col xs={24} md={12}>
           <Card title="Топ клиенты">
-            {stats?.analytics?.topCustomers?.length > 0 ? (
+            {stats.analytics.topCustomers.length > 0 ? (
               <List
-                dataSource={stats?.analytics?.topCustomers || []}
+                dataSource={stats.analytics.topCustomers}
                 renderItem={(customer, index) => (
                   <List.Item>
                     <List.Item.Meta

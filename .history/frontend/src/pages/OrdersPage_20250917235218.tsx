@@ -37,8 +37,7 @@ import {
   CheckCircleOutlined,
   ClockCircleOutlined,
   CloseCircleOutlined,
-  TruckOutlined,
-  DollarOutlined
+  TruckOutlined
 } from '@ant-design/icons';
 import dayjs from 'dayjs';
 import api from '../services/api';
@@ -178,7 +177,7 @@ const OrdersPage: React.FC = () => {
     {
       title: 'Клиент',
       key: 'customer',
-      render: (_: any, record: Order) => (
+      render: (_, record: Order) => (
         <div>
           <Text strong>{record.customerName || 'Не указан'}</Text>
           {record.customerEmail && (
@@ -232,7 +231,7 @@ const OrdersPage: React.FC = () => {
     {
       title: 'Картины',
       key: 'pictures',
-      render: (_: any, record: Order) => (
+      render: (_, record: Order) => (
         <div>
           <Text>{record._count?.pictures || 0} шт.</Text>
           {record.pictures && record.pictures.length > 0 && (

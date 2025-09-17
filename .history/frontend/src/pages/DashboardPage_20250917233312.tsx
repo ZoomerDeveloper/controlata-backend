@@ -190,7 +190,7 @@ const DashboardPage: React.FC = () => {
           <Card title="Топ клиенты">
             {stats?.analytics?.topCustomers?.length > 0 ? (
               <List
-                dataSource={stats?.analytics?.topCustomers || []}
+                dataSource={stats.analytics.topCustomers}
                 renderItem={(customer, index) => (
                   <List.Item>
                     <List.Item.Meta

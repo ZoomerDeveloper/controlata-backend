@@ -9,7 +9,7 @@ import {
   Modal,
   Form,
   Input,
-  Select,
+  InputNumber,
   Switch,
   message,
   Popconfirm,
@@ -22,92 +22,81 @@ import {
   PlusOutlined,
   EditOutlined,
   DeleteOutlined,
-  ShoppingCartOutlined,
+  PictureOutlined,
   WarningOutlined
 } from '@ant-design/icons';
 import api from '../services/api';
-import { Material } from '../types';
+import { PictureSize } from '../types';
 
 const { Title, Text } = Typography;
-const { Option } = Select;
 
-const MaterialsPage: React.FC = () => {
-  const [materials, setMaterials] = useState<Material[]>([]);
+const PictureSizesPage: React.FC = () => {
+  const [pictureSizes, setPictureSizes] = useState<PictureSize[]>([]);
   const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
-  const [editingMaterial, setEditingMaterial] = useState<Material | null>(null);
+  const [editingSize, setEditingSize] = useState<PictureSize | null>(null);
   const [form] = Form.useForm();
 
-  const categories = [
-    { value: 'CANVAS', label: 'Холст' },
-    { value: 'PAINT', label: 'Краска' },
-    { value: 'BRUSH', label: 'Кисть' },
-    { value: 'FRAME', label: 'Рамка' },
-    { value: 'NUMBER', label: 'Номер' },
-    { value: 'PACKAGING', label: 'Упаковка' },
-    { value: 'OTHER', label: 'Прочее' }
-  ];
-
-  const units = [
-    { value: 'шт', label: 'Штуки' },
-    { value: 'мл', label: 'Миллилитры' },
-    { value: 'г', label: 'Граммы' },
-    { value: 'м', label: 'Метры' },
-    { value: 'см', label: 'Сантиметры' }
-  ];
-
   useEffect(() => {
-    fetchMaterials();
+    fetchPictureSizes();
   }, []);
 
-  const fetchMaterials = async () => {
+  const fetchPictureSizes = async () => {
     setLoading(true);
     try {
-      const response = await api.getMaterials();
-      setMaterials(response.data);
+      const response = await api.getPictureSizes();
+      setPictureSizes(response.data);
     } catch (error) {
-      message.error('Ошибка загрузки материалов');
+      message.error('Ошибка загрузки размеров картин');
     } finally {
       setLoading(false);
     }
   };
 
   const handleAdd = () => {
-    setEditingMaterial(null);
+    setEditingSize(null);
     form.resetFields();
     setModalVisible(true);
   };
 
-  const handleEdit = (material: Material) => {
-    setEditingMaterial(material);
-    form.setFieldsValue(material);
+  const handleEdit = (size: PictureSize) => {
+    setEditingSize(size);
+    form.setFieldsValue(size);
     setModalVisible(true);
   };
 
   const handleDelete = async (id: string) => {
     try {
-      await api.deleteMaterial(id);
-      message.success('Материал удален');
-      fetchMaterials();
+      await api.deletePictureSize(id);
+      message.success('Размер картин удален');
+      fetchPictureSizes();
     } catch (error) {
-      message.error('Ошибка удаления материала');
+      message.error('Ошибка удаления размера картин');
     }
   };
 
   const handleSubmit = async (values: any) => {
     try {
-      if (editingMaterial) {
-        await api.updateMaterial(editingMaterial.id, values);
-        message.success('Материал обновлен');
+      if (editingSize) {
+        await api.updatePictureSize(editingSize.id, values);
+        message.success('Размер картин обновлен');
       } else {
-        await api.createMaterial(values);
-        message.success('Материал создан');
+        await api.createPictureSize(values);
+        message.success('Размер картин создан');
       }
       setModalVisible(false);
-      fetchMaterials();
+      fetchPictureSizes();
     } catch (error) {
-      message.error('Ошибка сохранения материала');
+      message.error('Ошибка сохранения размера картин');
     }
+  };
+
+  const getSizeCategory = (width: number, height: number) => {
+    const area = width * height;
+    if (area <= 600) return { label: 'Маленький', color: 'blue' };
+    if (area <= 2000) return { label: 'Средний', color: 'green' };
+    if (area <= 4000) return { label: 'Большой', color: 'orange' };
+    return { label: 'Очень большой', color: 'red' };
   };
 
   const columns = [
@@ -115,7 +104,7 @@ const MaterialsPage: React.FC = () => {
       title: 'Название',
       dataIndex: 'name',
       key: 'name',
-      render: (text: string, record: Material) => (
+      render: (text: string, record: PictureSize) => (
         <div>
           <Text strong>{text}</Text>
           {record.description && (
@@ -129,18 +118,26 @@ const MaterialsPage: React.FC = () => {
       )
     },
     {
-      title: 'Категория',
-      dataIndex: 'category',
-      key: 'category',
-      render: (category: string) => {
-        const categoryInfo = categories.find(c => c.value === category);
-        return <Tag color="blue">{categoryInfo?.label || category}</Tag>;
-      }
+      title: 'Размеры',
+      key: 'dimensions',
+      render: (_, record: PictureSize) => (
+        <div>
+          <Text>{record.width} × {record.height} см</Text>
+          <div>
+            <Text type="secondary" style={{ fontSize: '12px' }}>
+              Площадь: {record.width * record.height} см²
+            </Text>
+          </div>
+        </div>
+      )
     },
     {
-      title: 'Единица',
-      dataIndex: 'unit',
-      key: 'unit'
+      title: 'Категория',
+      key: 'category',
+      render: (_, record: PictureSize) => {
+        const category = getSizeCategory(record.width, record.height);
+        return <Tag color={category.color}>{category.label}</Tag>;
+      }
     },
     {
       title: 'Статус',
@@ -155,7 +152,7 @@ const MaterialsPage: React.FC = () => {
     {
       title: 'Действия',
       key: 'actions',
-      render: (_: any, record: Material) => (
+      render: (_: any, record: PictureSize) => (
         <Space>
           <Button
             type="text"
@@ -163,7 +160,7 @@ const MaterialsPage: React.FC = () => {
             onClick={() => handleEdit(record)}
           />
           <Popconfirm
-            title="Удалить материал?"
+            title="Удалить размер картин?"
             onConfirm={() => handleDelete(record.id)}
             okText="Да"
             cancelText="Нет"
@@ -179,7 +176,8 @@ const MaterialsPage: React.FC = () => {
     }
   ];
 
-  const lowStockMaterials = materials.filter(m => m.name.includes('краска'));
+  const activeSizes = pictureSizes.filter(s => s.isActive);
+  const inactiveSizes = pictureSizes.filter(s => !s.isActive);
 
   return (
     <div style={{ padding: '24px' }}>
@@ -187,9 +185,9 @@ const MaterialsPage: React.FC = () => {
         <Card>
           <Row justify="space-between" align="middle">
             <Col>
-              <Title level={2}>Материалы</Title>
+              <Title level={2}>Размеры картин</Title>
               <Text type="secondary">
-                Управление материалами для производства картин
+                Управление размерами картин по номерам
               </Text>
             </Col>
             <Col>
@@ -198,16 +196,16 @@ const MaterialsPage: React.FC = () => {
                 icon={<PlusOutlined />}
                 onClick={handleAdd}
               >
-                Добавить материал
+                Добавить размер
               </Button>
             </Col>
           </Row>
         </Card>
 
-        {lowStockMaterials.length > 0 && (
+        {inactiveSizes.length > 0 && (
           <Alert
-            message="Внимание! Низкие остатки"
-            description={`${lowStockMaterials.length} материалов с низким остатком`}
+            message="Внимание! Неактивные размеры"
+            description={`${inactiveSizes.length} размеров неактивны`}
             type="warning"
             icon={<WarningOutlined />}
             showIcon
@@ -218,9 +216,9 @@ const MaterialsPage: React.FC = () => {
           <Col xs={24} sm={8}>
             <Card>
               <Statistic
-                title="Всего материалов"
-                value={materials.length}
-                prefix={<ShoppingCartOutlined />}
+                title="Всего размеров"
+                value={pictureSizes.length}
+                prefix={<PictureOutlined />}
               />
             </Card>
           </Col>
@@ -228,7 +226,7 @@ const MaterialsPage: React.FC = () => {
             <Card>
               <Statistic
                 title="Активных"
-                value={materials.filter(m => m.isActive).length}
+                value={activeSizes.length}
                 valueStyle={{ color: '#3f8600' }}
               />
             </Card>
@@ -237,7 +235,7 @@ const MaterialsPage: React.FC = () => {
             <Card>
               <Statistic
                 title="Неактивных"
-                value={materials.filter(m => !m.isActive).length}
+                value={inactiveSizes.length}
                 valueStyle={{ color: '#cf1322' }}
               />
             </Card>
@@ -247,7 +245,7 @@ const MaterialsPage: React.FC = () => {
         <Card>
           <Table
             columns={columns}
-            dataSource={materials}
+            dataSource={pictureSizes}
             loading={loading}
             rowKey="id"
             pagination={{
@@ -255,14 +253,14 @@ const MaterialsPage: React.FC = () => {
               showSizeChanger: true,
               showQuickJumper: true,
               showTotal: (total, range) =>
-                `${range[0]}-${range[1]} из ${total} материалов`
+                `${range[0]}-${range[1]} из ${total} размеров`
             }}
           />
         </Card>
       </Space>
 
       <Modal
-        title={editingMaterial ? 'Редактировать материал' : 'Добавить материал'}
+        title={editingSize ? 'Редактировать размер картин' : 'Добавить размер картин'}
         open={modalVisible}
         onCancel={() => setModalVisible(false)}
         footer={null}
@@ -278,7 +276,7 @@ const MaterialsPage: React.FC = () => {
             label="Название"
             rules={[{ required: true, message: 'Введите название' }]}
           >
-            <Input placeholder="Название материала" />
+            <Input placeholder="Например: 30x40 см" />
           </Form.Item>
 
           <Form.Item
@@ -286,7 +284,7 @@ const MaterialsPage: React.FC = () => {
             label="Описание"
           >
             <Input.TextArea
-              placeholder="Описание материала"
+              placeholder="Описание размера"
               rows={3}
             />
           </Form.Item>
@@ -294,32 +292,30 @@ const MaterialsPage: React.FC = () => {
           <Row gutter={16}>
             <Col span={12}>
               <Form.Item
-                name="category"
-                label="Категория"
-                rules={[{ required: true, message: 'Выберите категорию' }]}
+                name="width"
+                label="Ширина (см)"
+                rules={[{ required: true, message: 'Введите ширину' }]}
               >
-                <Select placeholder="Выберите категорию">
-                  {categories.map(cat => (
-                    <Option key={cat.value} value={cat.value}>
-                      {cat.label}
-                    </Option>
-                  ))}
-                </Select>
+                <InputNumber
+                  min={1}
+                  max={200}
+                  style={{ width: '100%' }}
+                  placeholder="30"
+                />
               </Form.Item>
             </Col>
             <Col span={12}>
               <Form.Item
-                name="unit"
-                label="Единица измерения"
-                rules={[{ required: true, message: 'Выберите единицу' }]}
+                name="height"
+                label="Высота (см)"
+                rules={[{ required: true, message: 'Введите высоту' }]}
               >
-                <Select placeholder="Выберите единицу">
-                  {units.map(unit => (
-                    <Option key={unit.value} value={unit.value}>
-                      {unit.label}
-                    </Option>
-                  ))}
-                </Select>
+                <InputNumber
+                  min={1}
+                  max={200}
+                  style={{ width: '100%' }}
+                  placeholder="40"
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -339,7 +335,7 @@ const MaterialsPage: React.FC = () => {
           <Form.Item>
             <Space>
               <Button type="primary" htmlType="submit">
-                {editingMaterial ? 'Обновить' : 'Создать'}
+                {editingSize ? 'Обновить' : 'Создать'}
               </Button>
               <Button onClick={() => setModalVisible(false)}>
                 Отмена
@@ -352,4 +348,4 @@ const MaterialsPage: React.FC = () => {
   );
 };
 
-export default MaterialsPage;
+export default PictureSizesPage;

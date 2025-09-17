@@ -52,7 +52,6 @@ const AppRoutes: React.FC = () => {
                 <Route path="/orders" element={<OrdersPage />} />
                 <Route path="/pictures" element={<PicturesPage />} />
                 <Route path="/materials" element={<MaterialsPage />} />
-                <Route path="/picture-sizes" element={<PictureSizesPage />} />
                 <Route path="/incomes" element={<IncomesPage />} />
                 <Route path="/expenses" element={<ExpensesPage />} />
                 <Route path="/reports" element={<ReportsPage />} />

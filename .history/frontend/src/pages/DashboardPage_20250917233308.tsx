@@ -188,9 +188,9 @@ const DashboardPage: React.FC = () => {
         {/* Топ клиенты */}
         <Col xs={24} md={12}>
           <Card title="Топ клиенты">
-            {stats?.analytics?.topCustomers?.length > 0 ? (
+            {stats.analytics.topCustomers.length > 0 ? (
               <List
-                dataSource={stats?.analytics?.topCustomers || []}
+                dataSource={stats.analytics.topCustomers}
                 renderItem={(customer, index) => (
                   <List.Item>
                     <List.Item.Meta

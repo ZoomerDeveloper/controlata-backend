@@ -64,7 +64,7 @@ const MaterialsPage: React.FC = () => {
     setLoading(true);
     try {
       const response = await api.getMaterials();
-      setMaterials(response.data);
+      setMaterials(response.materials);
     } catch (error) {
       message.error('Ошибка загрузки материалов');
     } finally {
@@ -155,7 +155,7 @@ const MaterialsPage: React.FC = () => {
     {
       title: 'Действия',
       key: 'actions',
-      render: (_: any, record: Material) => (
+      render: (_, record: Material) => (
         <Space>
           <Button
             type="text"

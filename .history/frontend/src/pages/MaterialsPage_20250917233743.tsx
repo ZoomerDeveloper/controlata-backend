@@ -155,7 +155,7 @@ const MaterialsPage: React.FC = () => {
     {
       title: 'Действия',
       key: 'actions',
-      render: (_: any, record: Material) => (
+      render: (_, record: Material) => (
         <Space>
           <Button
             type="text"
