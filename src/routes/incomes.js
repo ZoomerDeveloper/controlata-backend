@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const incomeController = require('../controllers/incomeController');
+const {
+  getAllIncomes,
+  getIncomeById,
+  createIncome,
+  updateIncome,
+  deleteIncome,
+  getIncomeStats
+} = require('../controllers/incomeController');
 const { validateRequest, validateQuery, paginationSchema } = require('../validators/common');
 const { 
   createIncomeSchema, 
@@ -12,31 +19,31 @@ const {
 // Получить все доходы
 router.get('/', 
   validateQuery(paginationSchema), 
-  incomeController.getAllIncomes
+  getAllIncomes
 );
 
 // Получить статистику доходов
 router.get('/stats', 
   validateQuery(incomeStatsSchema), 
-  incomeController.getIncomeStats
+  getIncomeStats
 );
 
 // Получить доход по ID
-router.get('/:id', incomeController.getIncomeById);
+router.get('/:id', getIncomeById);
 
 // Создать новый доход
 router.post('/', 
   validateRequest(createIncomeSchema), 
-  incomeController.createIncome
+  createIncome
 );
 
 // Обновить доход
 router.put('/:id', 
   validateRequest(updateIncomeSchema), 
-  incomeController.updateIncome
+  updateIncome
 );
 
 // Удалить доход
-router.delete('/:id', incomeController.deleteIncome);
+router.delete('/:id', deleteIncome);
 
 module.exports = router;

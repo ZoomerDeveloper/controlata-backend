@@ -50,46 +50,46 @@ const updateStockLevelSchema = Joi.object({
 // Получить все материалы
 router.get('/', 
   validateQuery(paginationSchema), 
-  getAllMaterials
+  materialController.getAllMaterials
 );
 
 // Получить материал по ID
-router.get('/:id', getMaterialById);
+router.get('/:id', materialController.getMaterialById);
 
 // Создать новый материал
 router.post('/', 
   validateRequest(createMaterialSchema), 
-  createMaterial
+  materialController.createMaterial
 );
 
 // Обновить материал
 router.put('/:id', 
   validateRequest(updateMaterialSchema), 
-  updateMaterial
+  materialController.updateMaterial
 );
 
 // Удалить материал
-router.delete('/:id', deleteMaterial);
+router.delete('/:id', materialController.deleteMaterial);
 
 // Создать закупку материала
 router.post('/:id/purchases', 
   validateRequest(createPurchaseSchema), 
-  createMaterialPurchase
+  materialController.createMaterialPurchase
 );
 
 // Получить закупки материалов
 router.get('/purchases/all', 
   validateQuery(paginationSchema), 
-  getMaterialPurchases
+  materialController.getMaterialPurchases
 );
 
 // Обновить минимальный уровень остатка
 router.put('/:materialId/stock-level', 
   validateRequest(updateStockLevelSchema), 
-  updateStockLevel
+  materialController.updateStockLevel
 );
 
 // Получить материалы с низким остатком
-router.get('/low-stock/list', getLowStockMaterials);
+router.get('/low-stock/list', materialController.getLowStockMaterials);
 
 module.exports = router;

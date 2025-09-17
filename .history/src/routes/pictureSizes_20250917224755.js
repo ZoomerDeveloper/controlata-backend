@@ -29,25 +29,25 @@ const updatePictureSizeSchema = require('joi').object({
 // Получить все размеры картин
 router.get('/', 
   validateQuery(paginationSchema), 
-  getAllPictureSizes
+  pictureSizeController.getAllPictureSizes
 );
 
 // Получить размер картины по ID
-router.get('/:id', getPictureSizeById);
+router.get('/:id', pictureSizeController.getPictureSizeById);
 
 // Создать новый размер картины
 router.post('/', 
   validateRequest(createPictureSizeSchema), 
-  createPictureSize
+  pictureSizeController.createPictureSize
 );
 
 // Обновить размер картины
 router.put('/:id', 
   validateRequest(updatePictureSizeSchema), 
-  updatePictureSize
+  pictureSizeController.updatePictureSize
 );
 
 // Удалить размер картины
-router.delete('/:id', deletePictureSize);
+router.delete('/:id', pictureSizeController.deletePictureSize);
 
 module.exports = router;

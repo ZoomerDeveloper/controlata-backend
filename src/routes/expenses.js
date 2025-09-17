@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const expenseController = require('../controllers/expenseController');
+const {
+  getAllExpenses,
+  getExpenseById,
+  createExpense,
+  updateExpense,
+  deleteExpense,
+  getExpenseStats
+} = require('../controllers/expenseController');
 const { validateRequest, validateQuery, paginationSchema } = require('../validators/common');
 const { 
   createExpenseSchema, 
@@ -12,31 +19,31 @@ const {
 // Получить все расходы
 router.get('/', 
   validateQuery(paginationSchema), 
-  expenseController.getAllExpenses
+  getAllExpenses
 );
 
 // Получить статистику расходов
 router.get('/stats', 
   validateQuery(expenseStatsSchema), 
-  expenseController.getExpenseStats
+  getExpenseStats
 );
 
 // Получить расход по ID
-router.get('/:id', expenseController.getExpenseById);
+router.get('/:id', getExpenseById);
 
 // Создать новый расход
 router.post('/', 
   validateRequest(createExpenseSchema), 
-  expenseController.createExpense
+  createExpense
 );
 
 // Обновить расход
 router.put('/:id', 
   validateRequest(updateExpenseSchema), 
-  expenseController.updateExpense
+  updateExpense
 );
 
 // Удалить расход
-router.delete('/:id', expenseController.deleteExpense);
+router.delete('/:id', deleteExpense);
 
 module.exports = router;

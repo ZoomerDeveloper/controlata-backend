@@ -1,7 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const pictureController = require('../controllers/pictureController');
+const {
+  getAllPictures,
+  getPictureById,
+  createPicture,
+  updatePicture,
+  deletePicture,
+  addMaterialsToPicture,
+  updatePictureStatus,
+  calculatePictureCost
+} = require('../controllers/pictureController');
 const { validateRequest, validateQuery, paginationSchema } = require('../validators/common');
 const { 
   createPictureSchema, 
@@ -13,40 +22,40 @@ const {
 // Получить все картины
 router.get('/', 
   validateQuery(paginationSchema), 
-  pictureController.getAllPictures
+  getAllPictures
 );
 
 // Получить картину по ID
-router.get('/:id', pictureController.getPictureById);
+router.get('/:id', getPictureById);
 
 // Создать новую картину
 router.post('/', 
   validateRequest(createPictureSchema), 
-  pictureController.createPicture
+  createPicture
 );
 
 // Обновить картину
 router.put('/:id', 
   validateRequest(updatePictureSchema), 
-  pictureController.updatePicture
+  updatePicture
 );
 
 // Обновить статус картины
 router.patch('/:id/status', 
   validateRequest(updatePictureStatusSchema), 
-  pictureController.updatePictureStatus
+  updatePictureStatus
 );
 
 // Добавить материалы к картине
 router.post('/:id/materials', 
   validateRequest(addMaterialsSchema), 
-  pictureController.addMaterialsToPicture
+  addMaterialsToPicture
 );
 
 // Рассчитать себестоимость картины
-router.get('/:id/cost', pictureController.calculatePictureCost);
+router.get('/:id/cost', calculatePictureCost);
 
 // Удалить картину
-router.delete('/:id', pictureController.deletePicture);
+router.delete('/:id', deletePicture);
 
 module.exports = router;

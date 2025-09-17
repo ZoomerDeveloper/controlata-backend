@@ -21,37 +21,37 @@ const {
 // Получить все заказы
 router.get('/', 
   validateQuery(paginationSchema), 
-  getAllOrders
+  orderController.getAllOrders
 );
 
 // Получить заказы по датам
 router.get('/by-date-range', 
   validateQuery(dateRangeSchema), 
-  getOrdersByDateRange
+  orderController.getOrdersByDateRange
 );
 
 // Получить заказ по ID
-router.get('/:id', getOrderById);
+router.get('/:id', orderController.getOrderById);
 
 // Создать новый заказ
 router.post('/', 
   validateRequest(createOrderSchema), 
-  createOrder
+  orderController.createOrder
 );
 
 // Обновить заказ
 router.put('/:id', 
   validateRequest(updateOrderSchema), 
-  updateOrder
+  orderController.updateOrder
 );
 
 // Обновить статус заказа
 router.patch('/:id/status', 
   validateRequest(updateOrderStatusSchema), 
-  updateOrderStatus
+  orderController.updateOrderStatus
 );
 
 // Удалить заказ
-router.delete('/:id', deleteOrder);
+router.delete('/:id', orderController.deleteOrder);
 
 module.exports = router;

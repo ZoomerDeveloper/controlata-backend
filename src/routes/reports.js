@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const reportController = require('../controllers/reportController');
+const {
+  generateProfitLossReport,
+  generateCashFlowReport,
+  generateProductAnalysisReport,
+  getAllReports,
+  getReportById,
+  deleteReport
+} = require('../controllers/reportController');
 const { validateRequest, validateQuery, paginationSchema } = require('../validators/common');
 
 // Валидация для создания отчетов
@@ -13,31 +20,31 @@ const reportPeriodSchema = require('joi').object({
 // Получить все отчеты
 router.get('/', 
   validateQuery(paginationSchema), 
-  reportController.getAllReports
+  getAllReports
 );
 
 // Получить отчет по ID
-router.get('/:id', reportController.getReportById);
+router.get('/:id', getReportById);
 
 // Создать отчет P&L
 router.post('/profit-loss', 
   validateRequest(reportPeriodSchema), 
-  reportController.generateProfitLossReport
+  generateProfitLossReport
 );
 
 // Создать отчет движения денег
 router.post('/cash-flow', 
   validateRequest(reportPeriodSchema), 
-  reportController.generateCashFlowReport
+  generateCashFlowReport
 );
 
 // Создать отчет анализа продуктов
 router.post('/product-analysis', 
   validateRequest(reportPeriodSchema), 
-  reportController.generateProductAnalysisReport
+  generateProductAnalysisReport
 );
 
 // Удалить отчет
-router.delete('/:id', reportController.deleteReport);
+router.delete('/:id', deleteReport);
 
 module.exports = router;
