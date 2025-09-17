@@ -1,0 +1,6 @@
+# API Configuration
+REACT_APP_API_URL=https://controlata-production.up.railway.app/api
+
+# Alternative URLs for development
+# REACT_APP_API_URL=http://localhost:8080/api
+# REACT_APP_API_URL=https://api.art24.me/api
