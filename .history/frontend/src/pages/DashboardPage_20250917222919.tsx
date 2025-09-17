@@ -101,7 +101,7 @@ const DashboardPage: React.FC = () => {
             <Statistic
               title="Расходы"
               value={stats.finances.expenses}
-              prefix={<ArrowDownOutlined />}
+              prefix={<TrendingDownOutlined />}
               suffix="€"
               valueStyle={{ color: '#cf1322' }}
             />
@@ -113,7 +113,7 @@ const DashboardPage: React.FC = () => {
             <Statistic
               title="Прибыль"
               value={stats.finances.profit}
-              prefix={<ArrowUpOutlined />}
+              prefix={<TrendingUpOutlined />}
               suffix="€"
               valueStyle={{ color: stats.finances.profit >= 0 ? '#3f8600' : '#cf1322' }}
             />

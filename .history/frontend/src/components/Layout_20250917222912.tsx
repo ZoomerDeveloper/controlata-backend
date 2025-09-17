@@ -16,7 +16,7 @@ import {
   PictureOutlined,
   InboxOutlined,
   DollarOutlined,
-  ArrowDownOutlined,
+  TrendingDownOutlined,
   BarChartOutlined,
   UserOutlined,
   LogoutOutlined,
@@ -37,7 +37,7 @@ const menuItems = [
   { key: '/pictures', icon: <PictureOutlined />, label: 'Картины' },
   { key: '/materials', icon: <InboxOutlined />, label: 'Материалы' },
   { key: '/incomes', icon: <DollarOutlined />, label: 'Доходы' },
-  { key: '/expenses', icon: <ArrowDownOutlined />, label: 'Расходы' },
+  { key: '/expenses', icon: <TrendingDownOutlined />, label: 'Расходы' },
   { key: '/reports', icon: <BarChartOutlined />, label: 'Отчеты' },
 ];
 
