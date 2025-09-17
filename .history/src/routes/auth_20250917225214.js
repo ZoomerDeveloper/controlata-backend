@@ -14,37 +14,37 @@ const {
   loginSchema, 
   changePasswordSchema 
 } = require('../validators/auth');
-const authMiddleware = require('../middleware/auth');
+const { authMiddleware } = require('../middleware/auth');
 
 // Регистрация
 router.post('/register', 
   validateRequest(registerSchema), 
-  register
+  authController.register
 );
 
 // Вход
 router.post('/login', 
   validateRequest(loginSchema), 
-  login
+  authController.login
 );
 
 // Получение профиля
 router.get('/profile', 
   authMiddleware, 
-  getProfile
+  authController.getProfile
 );
 
 // Изменение пароля
 router.put('/change-password', 
   authMiddleware,
   validateRequest(changePasswordSchema), 
-  changePassword
+  authController.changePassword
 );
 
 // Выход
 router.post('/logout', 
   authMiddleware, 
-  logout
+  authController.logout
 );
 
 module.exports = router;
