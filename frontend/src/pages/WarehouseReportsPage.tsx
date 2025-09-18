@@ -67,13 +67,9 @@ const WarehouseReportsPage: React.FC = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const [movementsResponse, statsResponse] = await Promise.all([
-        api.getAllMovements(1000),
-        api.getWarehouseStats()
-      ]);
+      const movementsResponse = await api.getAllMovements(1000);
 
       setMovements(movementsResponse.movements || []);
-      setStats(statsResponse.stats || null);
     } catch (error) {
       message.error('Ошибка загрузки данных отчетов');
     } finally {
