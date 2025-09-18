@@ -653,24 +653,6 @@ const PicturesPage: React.FC = () => {
             />
           </Form.Item>
 
-          {stockWarnings.length > 0 && (
-            <Alert
-              message="Внимание! Проблемы с остатками материалов"
-              description={
-                <ul style={{ margin: 0, paddingLeft: 20 }}>
-                  {stockWarnings.map((warning, index) => (
-                    <li key={index} style={{ color: '#faad14' }}>
-                      <WarningOutlined /> {warning}
-                    </li>
-                  ))}
-                </ul>
-              }
-              type="warning"
-              showIcon
-              style={{ marginBottom: 16 }}
-            />
-          )}
-
           <Form.Item>
             <Space>
               <Button type="primary" htmlType="submit">

@@ -178,19 +178,6 @@ const PicturesPage: React.FC = () => {
         delete pictureData.orderId;
       }
       
-      // Проверяем остатки материалов перед созданием картины
-      if (!editingPicture && pictureData.materials && pictureData.materials.length > 0) {
-        const warnings = await checkMaterialStock(pictureData.materials);
-        if (warnings.length > 0) {
-          const shouldContinue = window.confirm(
-            `Внимание! Проблемы с остатками материалов:\n\n${warnings.join('\n')}\n\nПродолжить создание картины?`
-          );
-          if (!shouldContinue) {
-            return;
-          }
-        }
-      }
-      
       if (editingPicture) {
         await api.updatePicture(editingPicture.id, pictureData);
         message.success('Картина обновлена');
@@ -652,24 +639,6 @@ const PicturesPage: React.FC = () => {
               addonBefore="🖼️"
             />
           </Form.Item>
-
-          {stockWarnings.length > 0 && (
-            <Alert
-              message="Внимание! Проблемы с остатками материалов"
-              description={
-                <ul style={{ margin: 0, paddingLeft: 20 }}>
-                  {stockWarnings.map((warning, index) => (
-                    <li key={index} style={{ color: '#faad14' }}>
-                      <WarningOutlined /> {warning}
-                    </li>
-                  ))}
-                </ul>
-              }
-              type="warning"
-              showIcon
-              style={{ marginBottom: 16 }}
-            />
-          )}
 
           <Form.Item>
             <Space>

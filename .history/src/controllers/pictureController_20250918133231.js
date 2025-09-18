@@ -199,10 +199,9 @@ const createPicture = async (req, res) => {
       }
     });
 
-    // Добавляем материалы к картине и списываем со склада
+    // Добавляем материалы к картине
     if (materials && materials.length > 0) {
       for (const material of materials) {
-        // Создаем связь материала с картиной
         await prisma.pictureMaterial.create({
           data: {
             pictureId: picture.id,
@@ -210,35 +209,6 @@ const createPicture = async (req, res) => {
             quantity: material.quantity
           }
         });
-
-        // Списываем материал со склада
-        try {
-          const result = await warehouseService.removeMaterialFromStock(
-            material.materialId,
-            material.quantity,
-            `Создание картины: ${name}`,
-            picture.id,
-            'PICTURE',
-            `Картина: ${name} (${picture.id})`
-          );
-
-          if (result.isNegative) {
-            logger.warn('Material stock went negative', {
-              materialId: material.materialId,
-              quantity: material.quantity,
-              newQuantity: result.newQuantity,
-              pictureId: picture.id
-            });
-          }
-        } catch (error) {
-          logger.error('Error removing material from stock', {
-            materialId: material.materialId,
-            quantity: material.quantity,
-            pictureId: picture.id,
-            error: error.message
-          });
-          // Не прерываем создание картины, только логируем ошибку
-        }
       }
     }
 

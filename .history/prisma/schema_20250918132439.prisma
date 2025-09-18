@@ -1,0 +1,303 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      UserRole @default(ADMIN)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  orders    Order[]
+  expenses  Expense[]
+  incomes   Income[]
+  reports   Report[]
+
+  @@map("users")
+}
+
+model PictureSize {
+  id          String  @id @default(cuid())
+  name        String  @unique // "A4", "A3", "30x40", etc.
+  width       Float   // в см
+  height      Float   // в см
+  description String?
+  isActive    Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  pictures    Picture[]
+  materials   Material[]
+
+  @@map("picture_sizes")
+}
+
+model Material {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  unit        String        // "шт", "м", "л", "кг", etc.
+  category    MaterialCategory
+  isActive    Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  pictureSizeId String?
+  pictureSize   PictureSize? @relation(fields: [pictureSizeId], references: [id])
+  purchases     MaterialPurchase[]
+  stocks        Stock[]
+  pictureMaterials PictureMaterial[]
+  movements     MaterialMovement[]
+
+  @@map("materials")
+}
+
+model MaterialPurchase {
+  id          String   @id @default(cuid())
+  materialId  String
+  quantity    Float
+  unitPrice   Float    // цена за единицу в евро
+  totalPrice  Float    // общая стоимость
+  supplier    String?
+  purchaseDate DateTime @default(now())
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  material Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
+
+  @@map("material_purchases")
+}
+
+model Stock {
+  id         String   @id @default(cuid())
+  materialId String
+  quantity   Float    // текущий остаток
+  minLevel   Float?   // минимальный уровень для заказа
+  lastUpdated DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relations
+  material Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  movements MaterialMovement[]
+
+  @@unique([materialId])
+  @@map("stocks")
+}
+
+model MaterialMovement {
+  id          String   @id @default(cuid())
+  materialId  String
+  stockId     String
+  type        MovementType // IN, OUT, ADJUSTMENT
+  quantity    Float    // количество (положительное для поступления, отрицательное для списания)
+  reason      String?  // причина движения
+  referenceId String?  // ID связанной записи (заказ, картина, закупка)
+  referenceType String? // тип связанной записи (ORDER, PICTURE, PURCHASE, MANUAL)
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  material Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  stock    Stock    @relation(fields: [stockId], references: [id], onDelete: Cascade)
+
+  @@map("material_movements")
+}
+
+model Order {
+  id          String      @id @default(cuid())
+  orderNumber String      @unique
+  customerName String?
+  customerEmail String?
+  customerPhone String?
+  status      OrderStatus @default(PENDING)
+  totalPrice  Float       // общая стоимость заказа
+  notes       String?
+  orderDate   DateTime    @default(now())
+  dueDate     DateTime?
+  completedAt DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  pictures  Picture[]
+  incomes   Income[]
+
+  @@map("orders")
+}
+
+model Picture {
+  id          String      @id @default(cuid())
+  orderId     String?
+  pictureSizeId String
+  name        String
+  description String?
+  type        PictureType
+  status      PictureStatus @default(IN_PROGRESS)
+  price       Float       // цена продажи
+  costPrice   Float?      // себестоимость (рассчитывается автоматически)
+  workHours   Float?      // часы работы (для картин по фото)
+  notes       String?
+  imageUrl    String?     // URL изображения картины
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  order       Order?      @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  pictureSize PictureSize @relation(fields: [pictureSizeId], references: [id])
+  materials   PictureMaterial[]
+
+  @@map("pictures")
+}
+
+model PictureMaterial {
+  id        String  @id @default(cuid())
+  pictureId String
+  materialId String
+  quantity  Float   // количество материала на картину
+
+  // Relations
+  picture  Picture  @relation(fields: [pictureId], references: [id], onDelete: Cascade)
+  material Material @relation(fields: [materialId], references: [id])
+
+  @@unique([pictureId, materialId])
+  @@map("picture_materials")
+}
+
+model Income {
+  id          String      @id @default(cuid())
+  orderId     String?
+  amount      Float       // сумма в евро
+  description String
+  category    IncomeCategory
+  date        DateTime    @default(now())
+  notes       String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  userId  String
+  user    User    @relation(fields: [userId], references: [id])
+  order   Order?  @relation(fields: [orderId], references: [id])
+
+  @@map("incomes")
+}
+
+model Expense {
+  id          String        @id @default(cuid())
+  amount      Float         // сумма в евро
+  description String
+  category    ExpenseCategory
+  date        DateTime      @default(now())
+  notes       String?
+  receipt     String?       // путь к файлу чека
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  userId  String
+  user    User    @relation(fields: [userId], references: [id])
+
+  @@map("expenses")
+}
+
+model Report {
+  id          String      @id @default(cuid())
+  name        String
+  type        ReportType
+  periodStart DateTime
+  periodEnd   DateTime
+  data        Json        // данные отчета в JSON
+  filePath    String?     // путь к сгенерированному файлу
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  userId  String
+  user    User    @relation(fields: [userId], references: [id])
+
+  @@map("reports")
+}
+
+// Enums
+enum UserRole {
+  ADMIN
+  MANAGER
+  ACCOUNTANT
+}
+
+enum MaterialCategory {
+  CANVAS
+  PAINT
+  BRUSH
+  FRAME
+  NUMBER
+  PACKAGING
+  OTHER
+}
+
+enum MovementType {
+  IN          // Поступление
+  OUT         // Списание
+  ADJUSTMENT  // Корректировка
+}
+
+enum OrderStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  DELIVERED
+}
+
+enum PictureType {
+  READY_MADE
+  CUSTOM_PHOTO
+}
+
+enum PictureStatus {
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum IncomeCategory {
+  SALES
+  OTHER
+}
+
+enum ExpenseCategory {
+  MATERIALS
+  PRODUCTION
+  LOGISTICS
+  RENT
+  MARKETING
+  OTHER
+}
+
+enum ReportType {
+  PROFIT_LOSS
+  CASH_FLOW
+  PRODUCT_ANALYSIS
+  CUSTOM
+}

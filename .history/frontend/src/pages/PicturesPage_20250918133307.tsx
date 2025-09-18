@@ -116,34 +116,6 @@ const PicturesPage: React.FC = () => {
     }
   };
 
-  const checkMaterialStock = async (materials: any[]) => {
-    try {
-      const response = await api.getWarehouseMaterials();
-      const warehouseMaterials = response.materials || [];
-      const warnings: string[] = [];
-
-      for (const material of materials) {
-        const warehouseMaterial = warehouseMaterials.find((wm: any) => wm.id === material.materialId);
-        if (warehouseMaterial) {
-          const currentStock = warehouseMaterial.currentStock || 0;
-          const requiredQuantity = material.quantity || 0;
-          
-          if (currentStock < requiredQuantity) {
-            warnings.push(`${warehouseMaterial.name}: недостаточно на складе (${currentStock} < ${requiredQuantity})`);
-          } else if (currentStock - requiredQuantity <= warehouseMaterial.minLevel) {
-            warnings.push(`${warehouseMaterial.name}: остаток будет низким после списания`);
-          }
-        }
-      }
-
-      setStockWarnings(warnings);
-      return warnings;
-    } catch (error) {
-      console.error('Ошибка проверки остатков:', error);
-      return [];
-    }
-  };
-
   const handleAdd = () => {
     setEditingPicture(null);
     form.resetFields();
@@ -176,19 +148,6 @@ const PicturesPage: React.FC = () => {
       const pictureData = { ...values };
       if (pictureType === 'ready') {
         delete pictureData.orderId;
-      }
-      
-      // Проверяем остатки материалов перед созданием картины
-      if (!editingPicture && pictureData.materials && pictureData.materials.length > 0) {
-        const warnings = await checkMaterialStock(pictureData.materials);
-        if (warnings.length > 0) {
-          const shouldContinue = window.confirm(
-            `Внимание! Проблемы с остатками материалов:\n\n${warnings.join('\n')}\n\nПродолжить создание картины?`
-          );
-          if (!shouldContinue) {
-            return;
-          }
-        }
       }
       
       if (editingPicture) {
@@ -652,24 +611,6 @@ const PicturesPage: React.FC = () => {
               addonBefore="🖼️"
             />
           </Form.Item>
-
-          {stockWarnings.length > 0 && (
-            <Alert
-              message="Внимание! Проблемы с остатками материалов"
-              description={
-                <ul style={{ margin: 0, paddingLeft: 20 }}>
-                  {stockWarnings.map((warning, index) => (
-                    <li key={index} style={{ color: '#faad14' }}>
-                      <WarningOutlined /> {warning}
-                    </li>
-                  ))}
-                </ul>
-              }
-              type="warning"
-              showIcon
-              style={{ marginBottom: 16 }}
-            />
-          )}
 
           <Form.Item>
             <Space>
