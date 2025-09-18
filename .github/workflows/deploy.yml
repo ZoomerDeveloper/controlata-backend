@@ -63,8 +63,12 @@ jobs:
     - name: Install Railway CLI
       run: npm install -g @railway/cli
       
+    - name: Link Railway project
+      run: railway link --service controlata-backend
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        
     - name: Deploy to Railway
       run: railway up --detach
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        RAILWAY_SERVICE: controlata-backend
