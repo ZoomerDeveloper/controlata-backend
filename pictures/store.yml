@@ -1,0 +1,2127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-09-18T02:01:19+03:00">
+	<shop>
+		<name>Art24</name>
+		<company>Тест</company>
+		<url>https://art24.me</url>
+		<platform>Tilda Publishing</platform>
+		<version>1.0</version>
+		<currencies>
+			<currency id="EUR" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="840138659562">All</category>
+			<category id="317974393782">Хиты продаж</category>
+			<category id="231179106082">Hit prodaj</category>
+			<category id="761485905622">Все картины</category>
+			<category id="185711889052">На Черногорском</category>
+		</categories>
+		<offers>
+		<offer id="612262420582">
+			<name>Любовь</name>
+			<vendorCode>Любовь</vendorCode>
+			<picture>https://static.tildacdn.com/stor6262-3836-4265-a336-343565343061/37993588.jpg</picture>
+			<url>https://art24.me/tproduct/612262420582-lyubov</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="207845153572">
+			<name>Бабочка на цветке</name>
+			<vendorCode>Бабочка на цветке</vendorCode>
+			<picture>https://static.tildacdn.com/stor3762-3033-4530-b837-383137383434/89822134.jpg</picture>
+			<url>https://art24.me/tproduct/207845153572-babochka-na-tsvetke</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="521386224072">
+			<name>Нежность</name>
+			<vendorCode>Нежность</vendorCode>
+			<picture>https://static.tildacdn.com/stor3937-3138-4734-b532-666135326566/10035647.jpg</picture>
+			<url>https://art24.me/tproduct/521386224072-nezhnost</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="120503728852">
+			<name>Львы</name>
+			<vendorCode>Львы</vendorCode>
+			<picture>https://static.tildacdn.com/stor3034-6534-4238-b161-323631373737/57013747.jpg</picture>
+			<url>https://art24.me/tproduct/120503728852-lvi</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="176239520442">
+			<name>Закат влюблённая пара</name>
+			<vendorCode>Закат влюблённая пара</vendorCode>
+			<picture>https://static.tildacdn.com/stor3066-6466-4364-b261-326362393561/15518608.jpg</picture>
+			<url>https://art24.me/tproduct/176239520442-zakat-vlyublyonnaya-para</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="292479788822">
+			<name>Скрудж Макдак (Биткоин)</name>
+			<vendorCode>Скрудж Макдак (Биткоин)</vendorCode>
+			<picture>https://static.tildacdn.com/stor6634-3832-4333-b164-373738303534/26998720.jpg</picture>
+			<url>https://art24.me/tproduct/292479788822-skrudzh-makdak-bitkoin</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="104664311852">
+			<name>Помятый доллар</name>
+			<vendorCode>Помятый доллар</vendorCode>
+			<picture>https://static.tildacdn.com/stor3938-3332-4437-b262-306236326338/99179301.jpg</picture>
+			<url>https://art24.me/tproduct/104664311852-pomyatii-dollar</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="751568380002">
+			<name>Чилловый парень</name>
+			<vendorCode>Чилловый парень</vendorCode>
+			<picture>https://static.tildacdn.com/stor6566-3361-4739-b535-313239343234/51197989.jpg</picture>
+			<url>https://art24.me/tproduct/751568380002-chillovii-paren</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="414077962402">
+			<name>Лякушка с деньгами</name>
+			<vendorCode>Лякушка с деньгами</vendorCode>
+			<picture>https://static.tildacdn.com/stor3131-3661-4232-b739-353963336161/74906697.jpg</picture>
+			<url>https://art24.me/tproduct/414077962402-lyakushka-s-dengami</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="567614031682">
+			<name>Девушка с пионами</name>
+			<vendorCode>Девушка с пионами</vendorCode>
+			<picture>https://static.tildacdn.com/stor3036-6163-4132-a433-653565376231/58933569.jpg</picture>
+			<url>https://art24.me/tproduct/567614031682-devushka-s-pionami</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="367585347772">
+			<name>Вихрь эмоций</name>
+			<vendorCode>Вихрь эмоций</vendorCode>
+			<picture>https://static.tildacdn.com/stor3137-6237-4661-b835-326361633162/78263446.jpg</picture>
+			<url>https://art24.me/tproduct/367585347772-vihr-emotsii</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="450299990862">
+			<name>Аниме</name>
+			<vendorCode>Аниме</vendorCode>
+			<picture>https://static.tildacdn.com/stor6262-6132-4338-b734-656332643166/70117203.jpg</picture>
+			<url>https://art24.me/tproduct/450299990862-anime</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="593796522502">
+			<name>Берсерс</name>
+			<vendorCode>Берсерс</vendorCode>
+			<picture>https://static.tildacdn.com/stor3664-3935-4530-b537-366335363433/11981688.jpg</picture>
+			<url>https://art24.me/tproduct/593796522502-bersers</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="911606116572">
+			<name>Вино с девушкой</name>
+			<vendorCode>Вино с девушкой</vendorCode>
+			<picture>https://static.tildacdn.com/stor3432-3137-4238-b162-663564353034/64595055.jpg</picture>
+			<url>https://art24.me/tproduct/911606116572-vino-s-devushkoi</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="790522462202">
+			<name>Девушка в шляпе</name>
+			<vendorCode>Девушка в шляпе</vendorCode>
+			<picture>https://static.tildacdn.com/stor3165-3334-4434-b466-363465336161/18054781.jpg</picture>
+			<url>https://art24.me/tproduct/790522462202-devushka-v-shlyape</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="972364483362">
+			<name>Девушка с бокалом</name>
+			<vendorCode>Девушка с бокалом</vendorCode>
+			<picture>https://static.tildacdn.com/stor6265-3466-4632-b834-616433616238/81861344.jpg</picture>
+			<url>https://art24.me/tproduct/972364483362-devushka-s-bokalom</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="498837576652">
+			<name>Девушка с двумя бокалами</name>
+			<vendorCode>Девушка с двумя бокалами</vendorCode>
+			<picture>https://static.tildacdn.com/stor3834-3934-4564-b231-333939316232/45202796.jpg</picture>
+			<url>https://art24.me/tproduct/498837576652-devushka-s-dvumya-bokalami</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="601160325672">
+			<name>Калибри</name>
+			<vendorCode>Калибри</vendorCode>
+			<picture>https://static.tildacdn.com/stor3930-6563-4362-b334-613339376330/19596612.jpg</picture>
+			<url>https://art24.me/tproduct/601160325672-kalibri</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="626413436732">
+			<name>Кот злюка</name>
+			<vendorCode>Кот злюка</vendorCode>
+			<picture>https://static.tildacdn.com/stor3237-6238-4439-a136-373630313963/57902843.jpg</picture>
+			<url>https://art24.me/tproduct/626413436732-kot-zlyuka</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="983843113542">
+			<name>Кошка с жевачкой</name>
+			<vendorCode>Кошка с жевачкой</vendorCode>
+			<picture>https://static.tildacdn.com/stor3364-6661-4261-a234-336664346165/47189046.jpg</picture>
+			<url>https://art24.me/tproduct/983843113542-koshka-s-zhevachkoi</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="797628770202">
+			<name>Планеты</name>
+			<vendorCode>Планеты</vendorCode>
+			<picture>https://static.tildacdn.com/stor3365-3034-4433-a639-636630333034/96287488.jpg</picture>
+			<url>https://art24.me/tproduct/797628770202-planeti</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="654943368762">
+			<name>Радостный слон</name>
+			<vendorCode>Радостный слон</vendorCode>
+			<picture>https://static.tildacdn.com/stor3662-3436-4834-b736-333264373330/31692558.jpg</picture>
+			<url>https://art24.me/tproduct/654943368762-radostnii-slon</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="277493019822">
+			<name>Рука с виноградом</name>
+			<vendorCode>Рука с виноградом</vendorCode>
+			<picture>https://static.tildacdn.com/stor6462-3434-4331-a531-313039393535/32445442.jpg</picture>
+			<url>https://art24.me/tproduct/277493019822-ruka-s-vinogradom</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="921654917632">
+			<name>Собака в очках</name>
+			<vendorCode>Собака в очках</vendorCode>
+			<picture>https://static.tildacdn.com/stor3531-3833-4832-b537-663430383863/55490832.jpg</picture>
+			<url>https://art24.me/tproduct/921654917632-sobaka-v-ochkah</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="513142496222">
+			<name>Исус 2</name>
+			<vendorCode>Исус 2</vendorCode>
+			<picture>https://static.tildacdn.com/stor6139-6630-4436-b962-373438373138/81581454.jpg</picture>
+			<url>https://art24.me/tproduct/513142496222-isus-2</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="789533850142">
+			<name>Щенок</name>
+			<vendorCode>Щенок</vendorCode>
+			<picture>https://static.tildacdn.com/stor3338-3763-4130-b431-306464373935/80008111.jpg</picture>
+			<url>https://art24.me/tproduct/789533850142-schenok</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="374838536792">
+			<name>Водапад девушка</name>
+			<vendorCode>Водапад девушка</vendorCode>
+			<picture>https://static.tildacdn.com/stor3831-3331-4361-b661-356631396632/58770312.jpg</picture>
+			<url>https://art24.me/tproduct/374838536792-vodapad-devushka</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="152104007092">
+			<name>Собака лапа</name>
+			<vendorCode>Собака лапа</vendorCode>
+			<picture>https://static.tildacdn.com/stor6639-3731-4337-a561-356133306430/59619532.jpg</picture>
+			<url>https://art24.me/tproduct/152104007092-sobaka-lapa</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="869551646142">
+			<name>Конь</name>
+			<vendorCode>Конь</vendorCode>
+			<picture>https://static.tildacdn.com/stor6535-6532-4237-b062-646364653532/82752826.jpg</picture>
+			<url>https://art24.me/tproduct/869551646142-kon</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="273512784652">
+			<name>Рыба яркая</name>
+			<vendorCode>Рыба яркая</vendorCode>
+			<picture>https://static.tildacdn.com/stor3231-3735-4736-a637-633232633331/92090824.jpg</picture>
+			<url>https://art24.me/tproduct/273512784652-riba-yarkaya</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="238863498862">
+			<name>Яркий конь</name>
+			<vendorCode>Яркий конь</vendorCode>
+			<picture>https://static.tildacdn.com/stor6436-3739-4833-b432-393034396664/99189004.jpg</picture>
+			<url>https://art24.me/tproduct/238863498862-yarkii-kon</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="654335703702">
+			<name>Влюбленная пара</name>
+			<vendorCode>Влюбленная пара</vendorCode>
+			<picture>https://static.tildacdn.com/stor6465-6434-4337-a361-333665303130/78993272.jpg</picture>
+			<url>https://art24.me/tproduct/654335703702-vlyublennaya-para</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="691735498622">
+			<name>Подсолнухи у моря</name>
+			<vendorCode>Подсолнухи у моря</vendorCode>
+			<picture>https://static.tildacdn.com/stor3639-6637-4966-b534-663764306232/38666578.jpg</picture>
+			<url>https://art24.me/tproduct/691735498622-podsolnuhi-u-morya</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="886838696092">
+			<name>Кот Ван Гог</name>
+			<vendorCode>Кот Ван Гог</vendorCode>
+			<picture>https://static.tildacdn.com/stor3331-3032-4333-b933-306133306436/62616733.jpg</picture>
+			<url>https://art24.me/tproduct/886838696092-kot-van-gog</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="164280965372">
+			<name>Ljubav</name>
+			<vendorCode>lubov</vendorCode>
+			<picture>https://static.tildacdn.com/stor6262-3836-4265-a336-343565343061/37993588.jpg</picture>
+			<url>https://art24.me/tproduct/164280965372-ljubav</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="630469078132">
+			<name>Leptir na cvijetu</name>
+			<vendorCode>Leptir na cvijetu</vendorCode>
+			<picture>https://static.tildacdn.com/stor3762-3033-4530-b837-383137383434/89822134.jpg</picture>
+			<url>https://art24.me/tproduct/630469078132-leptir-na-cvijetu</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="156899311732">
+			<name>Mekoća</name>
+			<vendorCode>Mekoća</vendorCode>
+			<picture>https://static.tildacdn.com/stor3937-3138-4734-b532-666135326566/10035647.jpg</picture>
+			<url>https://art24.me/tproduct/156899311732-mekoa</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="719122775572">
+			<name>Lavovi</name>
+			<vendorCode>Lavovi</vendorCode>
+			<picture>https://static.tildacdn.com/stor3034-6534-4238-b161-323631373737/57013747.jpg</picture>
+			<url>https://art24.me/tproduct/719122775572-lavovi</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="195056003092">
+			<name>Zalazak sunca zaljubljeni par</name>
+			<vendorCode>Zalazak sunca zaljubljeni par</vendorCode>
+			<picture>https://static.tildacdn.com/stor3066-6466-4364-b261-326362393561/15518608.jpg</picture>
+			<url>https://art24.me/tproduct/195056003092-zalazak-sunca-zaljubljeni-par</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="693970837842">
+			<name>Scrooge McDuck (Bitcoin )</name>
+			<vendorCode>Scrooge McDuck (Bitcoin )</vendorCode>
+			<picture>https://static.tildacdn.com/stor6634-3832-4333-b164-373738303534/26998720.jpg</picture>
+			<url>https://art24.me/tproduct/693970837842-scrooge-mcduck-bitcoin-</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="968200711542">
+			<name>Zgužvani dolar</name>
+			<vendorCode>Pomyatiy dollar</vendorCode>
+			<picture>https://static.tildacdn.com/stor3938-3332-4437-b262-306236326338/99179301.jpg</picture>
+			<url>https://art24.me/tproduct/968200711542-zguvani-dolar</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="753601119502">
+			<name>The chill guy</name>
+			<vendorCode>Chill guy</vendorCode>
+			<picture>https://static.tildacdn.com/stor6566-3361-4739-b535-313239343234/51197989.jpg</picture>
+			<url>https://art24.me/tproduct/753601119502-the-chill-guy</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="303608645272">
+			<name>Torbica sa novcem</name>
+			<vendorCode>Frog with money</vendorCode>
+			<picture>https://static.tildacdn.com/stor3131-3661-4232-b739-353963336161/74906697.jpg</picture>
+			<url>https://art24.me/tproduct/303608645272-torbica-sa-novcem</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="565020905282">
+			<name>Djevojka sa božurima</name>
+			<vendorCode>Djevojka sa božurima</vendorCode>
+			<picture>https://static.tildacdn.com/stor3036-6163-4132-a433-653565376231/58933569.jpg</picture>
+			<url>https://art24.me/tproduct/565020905282-djevojka-sa-bourima</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="727546876592">
+			<name>Vihor emocija</name>
+			<vendorCode>Vihr’ emociy</vendorCode>
+			<picture>https://static.tildacdn.com/stor3137-6237-4661-b835-326361633162/78263446.jpg</picture>
+			<url>https://art24.me/tproduct/727546876592-vihor-emocija</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="713655303622">
+			<name>Anime</name>
+			<vendorCode>Anime</vendorCode>
+			<picture>https://static.tildacdn.com/stor6262-6132-4338-b734-656332643166/70117203.jpg</picture>
+			<url>https://art24.me/tproduct/713655303622-anime</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="907728221492">
+			<name>The Berserker</name>
+			<vendorCode>bersers</vendorCode>
+			<picture>https://static.tildacdn.com/stor3664-3935-4530-b537-366335363433/11981688.jpg</picture>
+			<url>https://art24.me/tproduct/907728221492-the-berserker</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="486977550722">
+			<name>Vino sa devojkom</name>
+			<vendorCode>Vine with girl</vendorCode>
+			<picture>https://static.tildacdn.com/stor3432-3137-4238-b162-663564353034/64595055.jpg</picture>
+			<url>https://art24.me/tproduct/486977550722-vino-sa-devojkom</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="953614486202">
+			<name>Djevojka sa šeširom</name>
+			<vendorCode>Djevojka u šeširu</vendorCode>
+			<picture>https://static.tildacdn.com/stor3862-6365-4163-a339-323431373764/44806540.jpg</picture>
+			<url>https://art24.me/tproduct/953614486202-djevojka-sa-eirom</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="740520647002">
+			<name>Djevojka sa čašom</name>
+			<vendorCode>Djevojka sa čašom</vendorCode>
+			<picture>https://static.tildacdn.com/stor6265-3466-4632-b834-616433616238/81861344.jpg</picture>
+			<url>https://art24.me/tproduct/740520647002-djevojka-sa-aom</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="121281892272">
+			<name>Devojka sa naočarima</name>
+			<vendorCode>Girl with two glasses</vendorCode>
+			<picture>https://static.tildacdn.com/stor3834-3934-4564-b231-333939316232/45202796.jpg</picture>
+			<url>https://art24.me/tproduct/121281892272-devojka-sa-naoarima</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="222992893452">
+			<name>Kolibri</name>
+			<vendorCode>Calibri</vendorCode>
+			<picture>https://static.tildacdn.com/stor3930-6563-4362-b334-613339376330/19596612.jpg</picture>
+			<url>https://art24.me/tproduct/222992893452-kolibri</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="937083503622">
+			<name>Mačka je zla</name>
+			<vendorCode>Mačka je zla</vendorCode>
+			<picture>https://static.tildacdn.com/stor3237-6238-4439-a136-373630313963/57902843.jpg</picture>
+			<url>https://art24.me/tproduct/937083503622-maka-je-zla</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="991840030562">
+			<name>Mačka sa žvakaćom gumom</name>
+			<vendorCode>Cat with a bubble</vendorCode>
+			<picture>https://static.tildacdn.com/stor6634-3235-4364-b636-346439323431/26473479.jpg</picture>
+			<url>https://art24.me/tproduct/991840030562-maka-sa-vakaom-gumom</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="284191044752">
+			<name>Planete</name>
+			<vendorCode>Planeti</vendorCode>
+			<picture>https://static.tildacdn.com/stor3365-3034-4433-a639-636630333034/96287488.jpg</picture>
+			<url>https://art24.me/tproduct/284191044752-planete</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="664143853982">
+			<name>Radosni slon</name>
+			<vendorCode>Happy slon</vendorCode>
+			<picture>https://static.tildacdn.com/stor3662-3436-4834-b736-333264373330/31692558.jpg</picture>
+			<url>https://art24.me/tproduct/664143853982-radosni-slon</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="833809125702">
+			<name>Ruka sa grožđem</name>
+			<vendorCode>Ruka s vinogradom</vendorCode>
+			<picture>https://static.tildacdn.com/stor6462-3434-4331-a531-313039393535/32445442.jpg</picture>
+			<url>https://art24.me/tproduct/833809125702-ruka-sa-groem</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="189100813352">
+			<name>Pas sa naočarima</name>
+			<vendorCode>Pas sa naočarima</vendorCode>
+			<picture>https://static.tildacdn.com/stor3531-3833-4832-b537-663430383863/55490832.jpg</picture>
+			<url>https://art24.me/tproduct/189100813352-pas-sa-naoarima</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="577584586092">
+			<name>Pasja šapa</name>
+			<vendorCode>Pasja šapa</vendorCode>
+			<picture>https://static.tildacdn.com/stor6639-3731-4337-a561-356133306430/59619532.jpg</picture>
+			<url>https://art24.me/tproduct/577584586092-pasja-apa</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="123437485102">
+			<name>Konj</name>
+			<vendorCode>Horse</vendorCode>
+			<picture>https://static.tildacdn.com/stor6535-6532-4237-b062-646364653532/82752826.jpg</picture>
+			<url>https://art24.me/tproduct/123437485102-konj</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="721475167932">
+			<name>Riba je sjajna</name>
+			<vendorCode>Riba je sjajna.</vendorCode>
+			<picture>https://static.tildacdn.com/stor3231-3735-4736-a637-633232633331/92090824.jpg</picture>
+			<url>https://art24.me/tproduct/721475167932-riba-je-sjajna</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="316566466562">
+			<name>Šareni konj</name>
+			<vendorCode>Light horse</vendorCode>
+			<picture>https://static.tildacdn.com/stor6436-3739-4833-b432-393034396664/99189004.jpg</picture>
+			<url>https://art24.me/tproduct/316566466562-areni-konj</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="253769903852">
+			<name>Zaljubljeni par</name>
+			<vendorCode>Zaljubljeni par</vendorCode>
+			<picture>https://static.tildacdn.com/stor6465-6434-4337-a361-333665303130/78993272.jpg</picture>
+			<url>https://art24.me/tproduct/253769903852-zaljubljeni-par</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="492162673882">
+			<name>Suncokreti pored mora</name>
+			<vendorCode>Podsolyhi y morya</vendorCode>
+			<picture>https://static.tildacdn.com/stor3639-6637-4966-b534-663764306232/38666578.jpg</picture>
+			<url>https://art24.me/tproduct/492162673882-suncokreti-pored-mora</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="568915656282">
+			<name>Mačka Van Gogh</name>
+			<vendorCode>Mačka Van Gogh</vendorCode>
+			<picture>https://static.tildacdn.com/stor3331-3032-4333-b933-306133306436/62616733.jpg</picture>
+			<url>https://art24.me/tproduct/568915656282-maka-van-gogh</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="938931964582">
+			<name>Джек Рассел</name>
+			<vendorCode>Джек Рассел</vendorCode>
+			<picture>https://static.tildacdn.com/stor6335-3262-4234-a532-343135376335/84740250.jpg</picture>
+			<url>https://art24.me/tproduct/938931964582-dzhek-rassel</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="279513567872">
+			<name>Srećan par</name>
+			<vendorCode>Zaljubljeni par 2</vendorCode>
+			<picture>https://static.tildacdn.com/stor3330-6663-4834-b834-373339663137/44895479.jpg</picture>
+			<url>https://art24.me/tproduct/279513567872-srean-par</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="229722320682">
+			<name>Jack Russel</name>
+			<vendorCode>Jack Russel</vendorCode>
+			<picture>https://static.tildacdn.com/stor6335-3262-4234-a532-343135376335/84740250.jpg</picture>
+			<url>https://art24.me/tproduct/229722320682-jack-russel</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="953536458402">
+			<name>Яркая девушка</name>
+			<vendorCode>Яркая девушка</vendorCode>
+			<picture>https://static.tildacdn.com/stor3934-3239-4632-b739-646466663563/49067523.jpg</picture>
+			<url>https://art24.me/tproduct/953536458402-yarkaya-devushka</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="655597977302">
+			<name>Семейная</name>
+			<vendorCode>Семейная</vendorCode>
+			<picture>https://static.tildacdn.com/stor3664-3864-4735-b738-383534643338/84315429.jpg</picture>
+			<url>https://art24.me/tproduct/655597977302-semeinaya</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="898314260132">
+			<name>Супер Автомобиль</name>
+			<vendorCode>Супер Автомобиль</vendorCode>
+			<picture>https://static.tildacdn.com/stor3963-6536-4635-b364-383765363065/68017665.jpg</picture>
+			<url>https://art24.me/tproduct/898314260132-super-avtomobil</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="872333197222">
+			<name>Sjajna djevojka</name>
+			<vendorCode>Sjajna djevojka</vendorCode>
+			<picture>https://static.tildacdn.com/stor3934-3239-4632-b739-646466663563/49067523.jpg</picture>
+			<url>https://art24.me/tproduct/872333197222-sjajna-djevojka</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="234313981142">
+			<name>Fenomenalan auto</name>
+			<vendorCode>Fenomenalan auto</vendorCode>
+			<picture>https://static.tildacdn.com/stor3963-6536-4635-b364-383765363065/68017665.jpg</picture>
+			<url>https://art24.me/tproduct/234313981142-fenomenalan-auto</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="386678055182">
+			<name>СТРАСТЬ18+. Любовь. Пара.</name>
+			<picture>https://static.tildacdn.com/stor3532-3466-4961-b266-613131323034/76383416.jpg</picture>
+			<url>https://art24.me/tproduct/386678055182-strast18-lyubov-para</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="473220051022">
+			<name>СТРАСТЬ18+. Любовь. Пара.</name>
+			<picture>https://static.tildacdn.com/stor3236-6161-4466-b365-393264376631/34979406.jpg</picture>
+			<url>https://art24.me/tproduct/473220051022-strast18-lyubov-para</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="533200993232">
+			<name>Слушай своё тело 18+</name>
+			<picture>https://static.tildacdn.com/stor3564-6535-4131-b834-393262616439/69048482.jpg</picture>
+			<url>https://art24.me/tproduct/533200993232-slushai-svoyo-telo-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="357205238262">
+			<name>Оголенная женщина с канатом 18+</name>
+			<picture>https://static.tildacdn.com/stor6362-6262-4265-b130-643132613533/33992847.jpg</picture>
+			<url>https://art24.me/tproduct/357205238262-ogolennaya-zhenschina-s-kanatom-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="822766953582">
+			<name>Девушка с фотоаппаратом 18+</name>
+			<picture>https://static.tildacdn.com/stor3336-3637-4966-b062-356438656664/27346992.jpg</picture>
+			<url>https://art24.me/tproduct/822766953582-devushka-s-fotoapparatom-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="365882380112">
+			<name>СТРАСТЬ18+. Любовь. Пара.</name>
+			<picture>https://static.tildacdn.com/stor6234-6433-4231-b931-623464336162/12376655.jpg</picture>
+			<url>https://art24.me/tproduct/365882380112-strast18-lyubov-para</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="462592119852">
+			<name>Девушка с бокалом 18+</name>
+			<picture>https://static.tildacdn.com/stor3432-3032-4135-b634-646330666534/18002417.jpg</picture>
+			<url>https://art24.me/tproduct/462592119852-devushka-s-bokalom-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="260532034092">
+			<name>Танец</name>
+			<vendorCode>Танец</vendorCode>
+			<picture>https://static.tildacdn.com/stor3564-3164-4532-b564-653265623238/33100450.jpg</picture>
+			<url>https://art24.me/tproduct/260532034092-tanets</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="729294772142">
+			<name>Девушка с велосипедом 18+</name>
+			<picture>https://static.tildacdn.com/stor3031-3336-4437-b263-636461653037/44271913.jpg</picture>
+			<url>https://art24.me/tproduct/729294772142-devushka-s-velosipedom-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="127795378042">
+			<name>Девушка и спорт 18+</name>
+			<picture>https://static.tildacdn.com/stor3066-6336-4239-b765-306565623737/63323776.jpg</picture>
+			<url>https://art24.me/tproduct/127795378042-devushka-i-sport-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="837828506542">
+			<name>Девушка и спорт 18+</name>
+			<picture>https://static.tildacdn.com/stor6338-6330-4564-b364-616638356339/13611506.jpg</picture>
+			<url>https://art24.me/tproduct/837828506542-devushka-i-sport-18</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="855436244552">
+			<name>Большая волна в Канагаве</name>
+			<vendorCode>Большая волна в Канагаве</vendorCode>
+			<picture>https://static.tildacdn.com/stor3864-3832-4563-b033-383461393736/17321828.jpg</picture>
+			<url>https://art24.me/tproduct/855436244552-bolshaya-volna-v-kanagave</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="716055748002">
+			<name>Звездная ночь. Ван Гог</name>
+			<vendorCode>Звездная ночь. Ван Гог</vendorCode>
+			<picture>https://static.tildacdn.com/stor6666-3330-4632-a566-623839666536/47852872.jpg</picture>
+			<url>https://art24.me/tproduct/716055748002-zvezdnaya-noch-van-gog</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="758238512712">
+			<name>Сотворение Адама</name>
+			<vendorCode>Сотворение Адама</vendorCode>
+			<picture>https://static.tildacdn.com/stor3036-3366-4337-a430-373562366635/27005360.jpg</picture>
+			<url>https://art24.me/tproduct/758238512712-sotvorenie-adama</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="291371109372">
+			<name>Ваза с ирисами. Ван Гог</name>
+			<vendorCode>Ваза с ирисами. Ван Гог</vendorCode>
+			<picture>https://static.tildacdn.com/stor3936-6234-4531-b231-616634663130/46863641.jpg</picture>
+			<url>https://art24.me/tproduct/291371109372-vaza-s-irisami-van-gog</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="929647810702">
+			<name>Поцелуй Климта</name>
+			<vendorCode>Поцелуй Климта</vendorCode>
+			<picture>https://static.tildacdn.com/stor6338-3034-4636-b065-303732356235/38003656.jpg</picture>
+			<url>https://art24.me/tproduct/929647810702-potselui-klimta</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="341183337432">
+			<name>Подсолнухи Ван Гога</name>
+			<vendorCode>Подсолнухи Ван Гога</vendorCode>
+			<picture>https://static.tildacdn.com/stor3536-3136-4034-a166-366162643062/84781464.jpg</picture>
+			<url>https://art24.me/tproduct/341183337432-podsolnuhi-van-goga</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="452488917832">
+			<name>Деревня и подсолнухи</name>
+			<vendorCode>Деревня и подсолнухи</vendorCode>
+			<picture>https://static.tildacdn.com/stor3565-3235-4234-a337-353565306165/34764637.jpg</picture>
+			<url>https://art24.me/tproduct/452488917832-derevnya-i-podsolnuhi</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="362552735642">
+			<name>Леопард</name>
+			<vendorCode>Леопард</vendorCode>
+			<picture>https://static.tildacdn.com/stor3665-3139-4737-b763-636639363732/81797472.jpg</picture>
+			<url>https://art24.me/tproduct/362552735642-leopard</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="384412984962">
+			<name>Домики у моря</name>
+			<vendorCode>Домики у моря</vendorCode>
+			<picture>https://static.tildacdn.com/stor3162-3538-4866-a330-356137353335/21511346.jpg</picture>
+			<url>https://art24.me/tproduct/384412984962-domiki-u-morya</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="700225183822">
+			<name>Kuće uz more</name>
+			<vendorCode>Kućice uz more</vendorCode>
+			<picture>https://static.tildacdn.com/stor3162-3538-4866-a330-356137353335/21511346.jpg</picture>
+			<url>https://art24.me/tproduct/700225183822-kue-uz-more</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="825413206052">
+			<name>Leopard</name>
+			<vendorCode>Leopard</vendorCode>
+			<picture>https://static.tildacdn.com/stor3738-6533-4635-b739-313234656233/74024014.jpg</picture>
+			<url>https://art24.me/tproduct/825413206052-leopard</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="872473474502">
+			<name>Selo i suncokreti</name>
+			<vendorCode>Selo i suncokreti</vendorCode>
+			<picture>https://static.tildacdn.com/stor3565-3235-4234-a337-353565306165/34764637.jpg</picture>
+			<url>https://art24.me/tproduct/872473474502-selo-i-suncokreti</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="871449894122">
+			<name>Reprodukcija Vinsenta van Goga „Suncokreti“ — nastala je 1888–1889. godine.</name>
+			<vendorCode>Reprodukcija Vinsenta van Goga „Suncokreti“ — nast</vendorCode>
+			<picture>https://static.tildacdn.com/stor3536-3136-4034-a166-366162643062/84781464.jpg</picture>
+			<url>https://art24.me/tproduct/871449894122-reprodukcija-vinsenta-van-goga-suncokret</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="794471864902">
+			<name>Reprodukcija Gustava Klimta, slika „Poljubac“, nastala je u periodu 1907–1908. godine.</name>
+			<vendorCode>Reprodukcija Gustava Klimta, slika „Poljubac“, nas</vendorCode>
+			<picture>https://static.tildacdn.com/stor6338-3034-4636-b065-303732356235/38003656.jpg</picture>
+			<url>https://art24.me/tproduct/794471864902-reprodukcija-gustava-klimta-slika-poljub</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="516459539192">
+			<name>Reprodukcija „Perunike“ Vinsenta van Goga — slika je nastala u maju 1889. godine.</name>
+			<vendorCode>Reprodukcija „Perunike“ Vinsenta van Goga — slika</vendorCode>
+			<picture>https://static.tildacdn.com/stor3936-6234-4531-b231-616634663130/46863641.jpg</picture>
+			<url>https://art24.me/tproduct/516459539192-reprodukcija-perunike-vinsenta-van-goga</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="718539884222">
+			<name>Reprodukcija „Stvaranje Adama“ — slika je naslikana od strane Mikelanđela 1512. godine.</name>
+			<vendorCode>Reprodukcija „Stvaranje Adama“ — slika je naslikan</vendorCode>
+			<picture>https://static.tildacdn.com/stor3036-3366-4337-a430-373562366635/27005360.jpg</picture>
+			<url>https://art24.me/tproduct/718539884222-reprodukcija-stvaranje-adama-slika-je-na</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="333218973722">
+			<name>Reprodukcija „Zvezdana noć“ Vinsenta van Goga — slika je naslikana u junu 1889. godine.</name>
+			<vendorCode>Reprodukcija „Zvezdana noć“ Vinsenta van Goga — sl</vendorCode>
+			<picture>https://static.tildacdn.com/stor6666-3330-4632-a566-623839666536/47852872.jpg</picture>
+			<url>https://art24.me/tproduct/333218973722-reprodukcija-zvezdana-no-vinsenta-van-go</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="849177008842">
+			<name>Reprodukcija „Veliki talas kod Kanagave“ — slika japanskog umetnika Kacusike Hokusaija, nastala 1831. godine.</name>
+			<vendorCode>Reprodukcija „Veliki talas kod Kanagave“ — slika j</vendorCode>
+			<picture>https://static.tildacdn.com/stor3864-3832-4563-b033-383461393736/17321828.jpg</picture>
+			<url>https://art24.me/tproduct/849177008842-reprodukcija-veliki-talas-kod-kanagave-s</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="172722383102">
+			<name>Ples</name>
+			<vendorCode>ples</vendorCode>
+			<picture>https://static.tildacdn.com/stor3564-3164-4532-b564-653265623238/33100450.jpg</picture>
+			<url>https://art24.me/tproduct/172722383102-ples</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="568039460362">
+			<name>Manastir Ostrog 1</name>
+			<vendorCode>Manastir Ostrog</vendorCode>
+			<picture>https://static.tildacdn.com/stor3762-6666-4337-b636-326635666438/89830548.jpg</picture>
+			<url>https://art24.me/tproduct/568039460362-manastir-ostrog-1</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="102677304572">
+			<name>Manastir Ostrog 2</name>
+			<vendorCode>Manastir Ostrog 2</vendorCode>
+			<picture>https://static.tildacdn.com/stor3832-3934-4531-b534-653965666264/83491513.jpg</picture>
+			<url>https://art24.me/tproduct/102677304572-manastir-ostrog-2</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="953603047362">
+			<name>Manastir Ostrog 3</name>
+			<vendorCode>Manastir Ostrog 3</vendorCode>
+			<picture>https://static.tildacdn.com/stor6364-3765-4363-b535-613165643763/89846983.jpg</picture>
+			<url>https://art24.me/tproduct/953603047362-manastir-ostrog-3</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="993258494112">
+			<name>Manastir Ostrog 1</name>
+			<vendorCode>Manastir Ostrog 1</vendorCode>
+			<picture>https://static.tildacdn.com/stor3762-6666-4337-b636-326635666438/89830548.jpg</picture>
+			<url>https://art24.me/tproduct/993258494112-manastir-ostrog-1</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="991468586872">
+			<name>Manastir Ostrog 2</name>
+			<vendorCode>Manastir Ostrog 2</vendorCode>
+			<picture>https://static.tildacdn.com/stor3832-3934-4531-b534-653965666264/83491513.jpg</picture>
+			<url>https://art24.me/tproduct/991468586872-manastir-ostrog-2</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>840138659562</categoryId>
+		</offer>
+		<offer id="308883174512">
+			<name>Manastir Ostrog 3</name>
+			<vendorCode>Manastir Ostrog 3</vendorCode>
+			<picture>https://static.tildacdn.com/stor6364-3765-4363-b535-613165643763/89846983.jpg</picture>
+			<url>https://art24.me/tproduct/308883174512-manastir-ostrog-3</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>317974393782</categoryId>
+		</offer>
+		<offer id="477440440632">
+			<name>Reprodukcija Gustava Klimta, slika „Poljubac“, nastala je u periodu 1907–1908. godine.</name>
+			<vendorCode>Reprodukcija Gustava Klimta, slika „Poljubac“, nas</vendorCode>
+			<picture>https://static.tildacdn.com/stor3961-3638-4132-b261-323238666333/10826284.jpg</picture>
+			<url>https://art24.me/tproduct/477440440632-reprodukcija-gustava-klimta-slika-poljub</url>
+			<count>9999</count>
+			<price>60.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="702591626152">
+			<name>Devojka u mekim tonovima</name>
+			<vendorCode>Devojka u mekim tonovima</vendorCode>
+			<picture>https://static.tildacdn.com/stor3765-3663-4731-a461-323933306137/55720259.jpg</picture>
+			<url>https://art24.me/tproduct/702591626152-devojka-u-mekim-tonovima</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="696154184722">
+			<name>Djevojka u crnoj haljini</name>
+			<vendorCode>Devojka u crnoj haljini</vendorCode>
+			<picture>https://static.tildacdn.com/stor3730-3861-4362-b565-383633366331/67881599.jpg</picture>
+			<url>https://art24.me/tproduct/696154184722-djevojka-u-crnoj-haljini</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="311259037582">
+			<name>Priroda Crne Gore</name>
+			<vendorCode>Priroda Crne Gore</vendorCode>
+			<picture>https://static.tildacdn.com/stor6264-3961-4638-b664-373761346237/50775079.jpg</picture>
+			<url>https://art24.me/tproduct/311259037582-priroda-crne-gore</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="899563432662">
+			<name>Porodica</name>
+			<vendorCode>Porodica</vendorCode>
+			<picture>https://static.tildacdn.com/stor3664-3864-4735-b738-383534643338/84315429.jpg</picture>
+			<url>https://art24.me/tproduct/899563432662-porodica</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="243284688232">
+			<name>Priroda planine i cvijeće</name>
+			<vendorCode>Priroda planine i cveće</vendorCode>
+			<picture>https://static.tildacdn.com/stor6236-6439-4064-a365-343266623635/18065372.jpg</picture>
+			<url>https://art24.me/tproduct/243284688232-priroda-planine-i-cvijece</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="327751945712">
+			<name>Priroda planine i šume</name>
+			<vendorCode>Priroda planine i šume</vendorCode>
+			<picture>https://static.tildacdn.com/stor3961-6462-4338-a362-333633663432/93832866.jpg</picture>
+			<url>https://art24.me/tproduct/327751945712-priroda-planine-i-ume</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="661090740142">
+			<name>Priroda planine i jezera</name>
+			<vendorCode>Priroda planine i šume</vendorCode>
+			<picture>https://static.tildacdn.com/stor3265-6232-4738-b833-333162306632/17130966.jpg</picture>
+			<url>https://art24.me/tproduct/661090740142-priroda-planine-i-jezera</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="666440539992">
+			<name>Nar</name>
+			<vendorCode>Granate</vendorCode>
+			<picture>https://static.tildacdn.com/stor3837-6663-4135-a465-353130303331/40486488.jpg</picture>
+			<url>https://art24.me/tproduct/666440539992-nar</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="962813189062">
+			<name>Mandarine</name>
+			<vendorCode>Mandarine</vendorCode>
+			<picture>https://static.tildacdn.com/stor3466-6562-4338-b762-656533376338/98984240.jpg</picture>
+			<url>https://art24.me/tproduct/962813189062-mandarine</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="406690240142">
+			<name>Prelijepi makovi</name>
+			<vendorCode>Prelepi makov</vendorCode>
+			<picture>https://static.tildacdn.com/stor3533-3461-4461-b361-356433393030/97154925.jpg</picture>
+			<url>https://art24.me/tproduct/406690240142-prelijepi-makovi</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="289146420302">
+			<name>Dvije čaše vina</name>
+			<vendorCode>Dve čaše vina</vendorCode>
+			<picture>https://static.tildacdn.com/stor3561-6363-4462-a261-303233346665/72441767.jpg</picture>
+			<url>https://art24.me/tproduct/289146420302-dvije-ae-vina</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="879427196912">
+			<name>Mačka sa novcem</name>
+			<vendorCode>Mačka sa novcem</vendorCode>
+			<picture>https://static.tildacdn.com/stor3438-6135-4733-b966-346232366366/87872980.jpg</picture>
+			<url>https://art24.me/tproduct/879427196912-maka-sa-novcem</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="220987361762">
+			<name>Mačka sa ribom</name>
+			<vendorCode>Mačka sa ribom</vendorCode>
+			<picture>https://static.tildacdn.com/stor6435-6462-4866-a265-396365643666/59145158.jpg</picture>
+			<url>https://art24.me/tproduct/220987361762-maka-sa-ribom</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="178385955412">
+			<name>Šareni slon</name>
+			<vendorCode>Svetli slon</vendorCode>
+			<picture>https://static.tildacdn.com/stor6437-3561-4233-a165-613663353035/12748060.jpg</picture>
+			<url>https://art24.me/tproduct/178385955412-areni-slon</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="333487021912">
+			<name>Pametan pas</name>
+			<vendorCode>Pametan pas</vendorCode>
+			<picture>https://static.tildacdn.com/stor6537-6264-4139-b931-376364626137/72773599.jpg</picture>
+			<url>https://art24.me/tproduct/333487021912-pametan-pas</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="344069563322">
+			<name>Pas sa čašom vina</name>
+			<vendorCode>Pas sa čašom vina</vendorCode>
+			<picture>https://static.tildacdn.com/stor6634-3239-4336-b630-633735663464/57810520.jpg</picture>
+			<url>https://art24.me/tproduct/344069563322-pas-sa-aom-vina</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="226477152712">
+			<name>Crna mačka</name>
+			<vendorCode>Crna mačka</vendorCode>
+			<picture>https://static.tildacdn.com/stor6236-3561-4430-a634-396235373033/55921713.jpg</picture>
+			<url>https://art24.me/tproduct/226477152712-crna-maka</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="956764377142">
+			<name>Tri nara</name>
+			<vendorCode>Gomila nara</vendorCode>
+			<picture>https://static.tildacdn.com/stor3737-3638-4638-a463-303235633037/39402272.jpg</picture>
+			<url>https://art24.me/tproduct/956764377142-tri-nara</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="602625344802">
+			<name>Djevojka u cvijeću</name>
+			<vendorCode>Devojka u cveću</vendorCode>
+			<picture>https://static.tildacdn.com/stor3031-3032-4661-a661-323630363230/32087983.jpg</picture>
+			<url>https://art24.me/tproduct/602625344802-djevojka-u-cvijecu</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="482308605162">
+			<name>Zamišljena mačka</name>
+			<vendorCode>Devojka u cveću</vendorCode>
+			<picture>https://static.tildacdn.com/stor6562-6263-4231-b537-616632653065/23344362.jpg</picture>
+			<url>https://art24.me/tproduct/482308605162-zamiljena-maka</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="825983417702">
+			<name>Mačka na zalasku sunca</name>
+			<vendorCode>Mačka na zalasku sunca</vendorCode>
+			<picture>https://static.tildacdn.com/stor3936-3636-4263-b364-626337356663/99505788.jpg</picture>
+			<url>https://art24.me/tproduct/825983417702-maka-na-zalasku-sunca</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="881949171962">
+			<name>Tri mačke</name>
+			<vendorCode>Tri mačke</vendorCode>
+			<picture>https://static.tildacdn.com/stor3561-3831-4533-b463-313430383565/30729206.jpg</picture>
+			<url>https://art24.me/tproduct/881949171962-tri-make</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="789289219572">
+			<name>Prelijepa ruža</name>
+			<vendorCode>Prelepa ruža</vendorCode>
+			<picture>https://static.tildacdn.com/stor3938-3065-4063-a434-323261336333/45978560.jpg</picture>
+			<url>https://art24.me/tproduct/789289219572-prelijepa-rua</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="769142720202">
+			<name>Šareni pas</name>
+			<vendorCode>Yarkaya sobaka</vendorCode>
+			<picture>https://static.tildacdn.com/stor3931-3336-4032-b136-303961633562/71675641.jpg</picture>
+			<url>https://art24.me/tproduct/769142720202-areni-pas</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="905094875742">
+			<name>Djevojka sa božurima</name>
+			<vendorCode>Devushka s peshkoy</vendorCode>
+			<picture>https://static.tildacdn.com/stor3230-3934-4037-b930-393936613235/36116798.jpg</picture>
+			<url>https://art24.me/tproduct/905094875742-djevojka-sa-bourima</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="851814746172">
+			<name>Ljepota je u detaljima</name>
+			<vendorCode>Lepota je u detaljima</vendorCode>
+			<picture>https://static.tildacdn.com/stor6332-3935-4162-a131-313662663639/19406563.jpg</picture>
+			<url>https://art24.me/tproduct/851814746172-ljepota-je-u-detaljima</url>
+			<count>9999</count>
+			<price>40.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="207173811022">
+			<name>Leptir</name>
+			<vendorCode>Leptir</vendorCode>
+			<picture>https://static.tildacdn.com/stor3138-3834-4964-a462-323436386138/72865133.jpg</picture>
+			<url>https://art24.me/tproduct/207173811022-leptir</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="662392722502">
+			<name>Konj sa zlatom</name>
+			<vendorCode>Konj sa zlatom</vendorCode>
+			<picture>https://static.tildacdn.com/stor3530-3365-4164-a234-396538363339/41218410.jpg</picture>
+			<url>https://art24.me/tproduct/662392722502-konj-sa-zlatom</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="885815230462">
+			<name>Scrooge McDuck (Bitcoin )</name>
+			<vendorCode>Scrooge McDuck (Bitcoin )</vendorCode>
+			<picture>https://static.tildacdn.com/stor6537-6562-4561-b231-313535623061/74406620.jpg</picture>
+			<url>https://art24.me/tproduct/885815230462-scrooge-mcduck-bitcoin-</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="325569539142">
+			<name>Par od kamena uz more</name>
+			<vendorCode>Par uz more od kamena</vendorCode>
+			<picture>https://static.tildacdn.com/stor6434-6665-4639-a361-663235623863/56370220.jpg</picture>
+			<url>https://art24.me/tproduct/325569539142-par-od-kamena-uz-more</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="193160640912">
+			<name>Djevojka sa čašom vina</name>
+			<vendorCode>Svetla devojka sa čašom vina</vendorCode>
+			<picture>https://static.tildacdn.com/stor6364-6336-4436-a139-623238343730/27143761.jpg</picture>
+			<url>https://art24.me/tproduct/193160640912-djevojka-sa-aom-vina</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="653699716442">
+			<name>Dva labuda</name>
+			<vendorCode>Dva labuda</vendorCode>
+			<picture>https://static.tildacdn.com/stor3464-3531-4231-b262-663563326533/38917167.jpg</picture>
+			<url>https://art24.me/tproduct/653699716442-dva-labuda</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="432760225852">
+			<name>Sunđer Bob</name>
+			<vendorCode>Sunđer Bob</vendorCode>
+			<picture>https://static.tildacdn.com/stor6336-6363-4764-a562-353635303031/22202409.jpg</picture>
+			<url>https://art24.me/tproduct/432760225852-suner-bob</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="465603948532">
+			<name>Scrooge McDuck Supreme</name>
+			<vendorCode>Scrooge McDuck Supreme</vendorCode>
+			<picture>https://static.tildacdn.com/stor6434-3433-4564-a436-336335616335/92470418.jpg</picture>
+			<url>https://art24.me/tproduct/465603948532-scrooge-mcduck-supreme</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="500043862932">
+			<name>Scrooge McDuck</name>
+			<vendorCode>Scrooge McDuck</vendorCode>
+			<picture>https://static.tildacdn.com/stor3965-6438-4461-b566-643035666138/19079047.jpg</picture>
+			<url>https://art24.me/tproduct/500043862932-scrooge-mcduck</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="788690087392">
+			<name>Kolibri svetao</name>
+			<vendorCode>Kolibri svetao</vendorCode>
+			<picture>https://static.tildacdn.com/stor3961-6237-4438-b830-383563363062/17618211.jpg</picture>
+			<url>https://art24.me/tproduct/788690087392-kolibri-svetao</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="184187376622">
+			<name>Priroda more</name>
+			<vendorCode>Priroda more</vendorCode>
+			<picture>https://static.tildacdn.com/stor3166-3034-4665-a561-613035386632/40307463.jpg</picture>
+			<url>https://art24.me/tproduct/184187376622-priroda-more</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="908447186352">
+			<name>Cetinjе pejzaž</name>
+			<vendorCode>Cetinjе pejzaž</vendorCode>
+			<picture>https://static.tildacdn.com/stor6236-3964-4136-a531-616333376261/70979808.jpg</picture>
+			<url>https://art24.me/tproduct/908447186352-cetinje-pejza</url>
+			<count>9999</count>
+			<price>70.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="183303817232">
+			<name>Angel</name>
+			<vendorCode>Angel</vendorCode>
+			<picture>https://static.tildacdn.com/stor6336-3237-4430-a666-333133353566/87084052.jpg</picture>
+			<url>https://art24.me/tproduct/183303817232-angel</url>
+			<count>9999</count>
+			<price>50.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="255956967342">
+			<name>Pas u Parizu</name>
+			<vendorCode>Pas u Parizu</vendorCode>
+			<picture>https://static.tildacdn.com/stor6637-3532-4535-b134-636461613838/67591073.jpg</picture>
+			<url>https://art24.me/tproduct/255956967342-pas-u-parizu</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="412339119502">
+			<name>Budva - Mogren</name>
+			<vendorCode>Budva - Mogren</vendorCode>
+			<picture>https://static.tildacdn.com/stor6239-6437-4730-b933-633438366363/82599202.jpg</picture>
+			<url>https://art24.me/tproduct/412339119502-budva-mogren</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="900191696622">
+			<name>Irisi</name>
+			<vendorCode>Irises</vendorCode>
+			<picture>https://static.tildacdn.com/stor6237-3466-4663-b238-653935393933/62897073.jpg</picture>
+			<url>https://art24.me/tproduct/900191696622-irisi</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="574666282962">
+			<name>Šareni kolibri</name>
+			<vendorCode>Bright Hummingbird</vendorCode>
+			<picture>https://static.tildacdn.com/stor3637-3264-4362-b131-383138326139/41154357.jpg</picture>
+			<url>https://art24.me/tproduct/574666282962-areni-kolibri</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="691052551202">
+			<name>Božuri</name>
+			<vendorCode>Peonies</vendorCode>
+			<picture>https://static.tildacdn.com/stor3037-3131-4465-b337-363139663837/19255814.jpg</picture>
+			<url>https://art24.me/tproduct/691052551202-bouri</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="340132638472">
+			<name>Priroda Herceg Novog</name>
+			<vendorCode>Priroda Herceg Novog</vendorCode>
+			<picture>https://static.tildacdn.com/stor6161-3734-4234-a364-316436636430/33651883.jpg</picture>
+			<url>https://art24.me/tproduct/340132638472-priroda-herceg-novog</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="713850607762">
+			<name>Manastir Ostrog 4</name>
+			<vendorCode>Manastir Ostrog 4</vendorCode>
+			<picture>https://static.tildacdn.com/stor3562-3138-4631-a661-306261383465/89660906.jpg</picture>
+			<url>https://art24.me/tproduct/713850607762-manastir-ostrog-4</url>
+			<count>9999</count>
+			<price>40.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="526339031172">
+			<name>Manastir Ostrog 5</name>
+			<vendorCode>Manastir Ostrog 5</vendorCode>
+			<picture>https://static.tildacdn.com/stor6231-3330-4936-b937-633865666162/67657803.jpg</picture>
+			<url>https://art24.me/tproduct/526339031172-manastir-ostrog-5</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="790211798142">
+			<name>Tom i Džeri za djecu od 8 godina</name>
+			<vendorCode>Tom i Džeri za decu od 8 godina</vendorCode>
+			<picture>https://static.tildacdn.com/stor3539-3230-4766-b538-303836326366/60493935.jpg</picture>
+			<url>https://art24.me/tproduct/790211798142-tom-i-deri-za-djecu-od-8-godina</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="481237392162">
+			<name>Scrooge McDuck Supreme</name>
+			<vendorCode>Scrooge McDuck Supreme</vendorCode>
+			<picture>https://static.tildacdn.com/stor6262-3837-4064-b038-323635393535/87879199.jpg</picture>
+			<url>https://art24.me/tproduct/481237392162-scrooge-mcduck-supreme</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="900603092742">
+			<name>Scrooge McDuck Nova Godina</name>
+			<picture>https://static.tildacdn.com/stor3162-3630-4836-b533-326563626631/98913570.jpg</picture>
+			<url>https://art24.me/tproduct/900603092742-scrooge-mcduck-nova-godina</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="167901968922">
+			<name>Pas u Parizu</name>
+			<vendorCode>Pas u Parizu</vendorCode>
+			<picture>https://static.tildacdn.com/stor3162-3932-4138-b034-343031666634/25870312.jpg</picture>
+			<url>https://art24.me/tproduct/167901968922-pas-u-parizu</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="230465791322">
+			<name>Tišina pred lavež</name>
+			<vendorCode>Dog Pav</vendorCode>
+			<picture>https://static.tildacdn.com/stor3565-6236-4664-b961-353634663530/97295208.jpg</picture>
+			<url>https://art24.me/tproduct/230465791322-tiina-pred-lave</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="440065362182">
+			<name>Budva stari grad</name>
+			<vendorCode>Budva stari grad</vendorCode>
+			<picture>https://static.tildacdn.com/stor3065-3061-4638-b138-323137363235/55462690.jpg</picture>
+			<url>https://art24.me/tproduct/440065362182-budva-stari-grad</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="326434833482">
+			<name>Gusinje - Prokletije</name>
+			<vendorCode>Gusinje - Prokletije</vendorCode>
+			<picture>https://static.tildacdn.com/stor3765-6137-4662-b963-383461306538/84349627.jpg</picture>
+			<url>https://art24.me/tproduct/326434833482-gusinje-prokletije</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="659793584262">
+			<name>Perast</name>
+			<vendorCode>Perast</vendorCode>
+			<picture>https://static.tildacdn.com/stor6162-3433-4566-b966-333462633731/65458878.jpg</picture>
+			<url>https://art24.me/tproduct/659793584262-perast</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="977240422262">
+			<name>Rađanje tišine</name>
+			<vendorCode>Radjanje tišine</vendorCode>
+			<picture>https://static.tildacdn.com/stor6464-3332-4335-a261-343761326635/66720818.jpg</picture>
+			<url>https://art24.me/tproduct/977240422262-raanje-tiine</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="437109872212">
+			<name>Skadarsko jezero</name>
+			<vendorCode>Skadarsko jezero</vendorCode>
+			<picture>https://static.tildacdn.com/stor6163-6265-4162-b630-316335646463/80511800.jpg</picture>
+			<url>https://art24.me/tproduct/437109872212-skadarsko-jezero</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="353995749992">
+			<name>Buđenje u vodi</name>
+			<vendorCode>Buđenje u vodi</vendorCode>
+			<picture>https://static.tildacdn.com/stor3031-6262-4636-b730-313735663734/29935691.jpg</picture>
+			<url>https://art24.me/tproduct/353995749992-buenje-u-vodi</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="363470643832">
+			<name>San među cvijećem</name>
+			<vendorCode>San među cvećem</vendorCode>
+			<picture>https://static.tildacdn.com/stor3266-3033-4662-a633-343566616133/21781721.jpg</picture>
+			<url>https://art24.me/tproduct/363470643832-san-meu-cvijeem</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="812519098072">
+			<name>Unutrašnji okean</name>
+			<vendorCode>Unutrašnji okean</vendorCode>
+			<picture>https://static.tildacdn.com/stor3736-3664-4065-b261-316538333435/22498886.jpg</picture>
+			<url>https://art24.me/tproduct/812519098072-unutranji-okean</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="849079561652">
+			<name>Tok osjećanja</name>
+			<vendorCode>Tok osećanja</vendorCode>
+			<picture>https://static.tildacdn.com/stor3961-6231-4039-a661-643635313735/17211251.jpg</picture>
+			<url>https://art24.me/tproduct/849079561652-tok-osjeanja</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="552285999132">
+			<name>Reprodukcija Gustava Klimta, slika „Poljubac“, nastala je u periodu 1907–1908. godine.</name>
+			<vendorCode>Reprodukcija Gustava Klimta, slika „Poljubac“, nas</vendorCode>
+			<picture>https://static.tildacdn.com/stor3162-6633-4066-b231-313831393632/42937796.jpg</picture>
+			<url>https://art24.me/tproduct/552285999132-reprodukcija-gustava-klimta-slika-poljub</url>
+			<count>9999</count>
+			<price>50.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="636122212372">
+			<name>Kolašin - Mušovica Rijeka</name>
+			<vendorCode>Kolašin - Mušovica Rijeka</vendorCode>
+			<picture>https://static.tildacdn.com/stor3635-3562-4261-b335-666166366630/67608776.jpg</picture>
+			<url>https://art24.me/tproduct/636122212372-kolain-muovica-rijeka</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="882987754002">
+			<name>Svetla lepa devojka</name>
+			<vendorCode>Svetla lepa devojka</vendorCode>
+			<picture>https://static.tildacdn.com/stor3239-3439-4339-b733-316532643465/91074106.jpg</picture>
+			<url>https://art24.me/tproduct/882987754002-svetla-lepa-devojka</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="895423340992">
+			<name>Sakura</name>
+			<vendorCode>Sakura</vendorCode>
+			<picture>https://static.tildacdn.com/stor6330-3939-4138-b238-396363333361/93399846.jpg</picture>
+			<url>https://art24.me/tproduct/895423340992-sakura</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="353695654732">
+			<name>Horse</name>
+			<vendorCode>Horse</vendorCode>
+			<picture>https://static.tildacdn.com/stor6232-6664-4564-b838-613464326438/55810254.jpg</picture>
+			<url>https://art24.me/tproduct/353695654732-horse</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="542424378632">
+			<name>Drvo života</name>
+			<vendorCode>Drvo života</vendorCode>
+			<picture>https://static.tildacdn.com/stor6661-6632-4264-a537-663639366436/68390646.jpg</picture>
+			<url>https://art24.me/tproduct/542424378632-drvo-ivota</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="264337530572">
+			<name>Crveni božuri</name>
+			<vendorCode>Crveni božuri</vendorCode>
+			<picture>https://static.tildacdn.com/stor3262-3935-4635-b961-613461633035/52235038.jpg</picture>
+			<url>https://art24.me/tproduct/264337530572-crveni-bouri</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="212223240392">
+			<name>Jesen</name>
+			<vendorCode>Jesen</vendorCode>
+			<picture>https://static.tildacdn.com/stor3530-3338-4833-b436-306437353763/70216493.jpg</picture>
+			<url>https://art24.me/tproduct/212223240392-jesen</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="568244247062">
+			<name>Morska kapija do mora</name>
+			<vendorCode>Morska kapija do mora</vendorCode>
+			<picture>https://static.tildacdn.com/stor6361-3437-4530-b439-666630346565/18968708.jpg</picture>
+			<url>https://art24.me/tproduct/568244247062-morska-kapija-do-mora</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="364133005422">
+			<name>Kuća iz snova</name>
+			<vendorCode>Kuća iz snova</vendorCode>
+			<picture>https://static.tildacdn.com/stor3031-6131-4863-a339-363335656532/71062653.jpg</picture>
+			<url>https://art24.me/tproduct/364133005422-kuca-iz-snova</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="414208946562">
+			<name>Božuri sa zlatnom bojom</name>
+			<vendorCode>Božuri sa zlatnom bojom</vendorCode>
+			<picture>https://static.tildacdn.com/stor3134-3132-4664-b630-316135626133/56123552.jpg</picture>
+			<url>https://art24.me/tproduct/414208946562-bouri-sa-zlatnom-bojom</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="631555524622">
+			<name>Vaza sa cvećem</name>
+			<vendorCode>Vaza sa cvećem</vendorCode>
+			<picture>https://static.tildacdn.com/stor3638-6236-4536-a636-306665343339/51002169.jpg</picture>
+			<url>https://art24.me/tproduct/631555524622-vaza-sa-cvecem</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="193505107682">
+			<name>Pečurke u šumi</name>
+			<vendorCode>Pečurke u šumi</vendorCode>
+			<picture>https://static.tildacdn.com/stor3565-6166-4230-a431-653966336663/76300784.jpg</picture>
+			<url>https://art24.me/tproduct/193505107682-peurke-u-umi</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="311651610242">
+			<name>Drvo moći</name>
+			<vendorCode>Drvo moći</vendorCode>
+			<picture>https://static.tildacdn.com/stor3239-6532-4263-a561-663065383764/12297576.jpg</picture>
+			<url>https://art24.me/tproduct/311651610242-drvo-moci</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="672105849182">
+			<name>Zlatna ribica u tegli</name>
+			<vendorCode>Zlatna ribica u tegli</vendorCode>
+			<picture>https://static.tildacdn.com/stor6530-3661-4232-b961-393966613265/19106541.jpg</picture>
+			<url>https://art24.me/tproduct/672105849182-zlatna-ribica-u-tegli</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>317974393782</categoryId>
+		</offer>
+		<offer id="394182394562">
+			<name>Jutro uz kafu</name>
+			<vendorCode>Jutro uz kafu</vendorCode>
+			<picture>https://static.tildacdn.com/stor3565-3637-4934-a263-316634326338/49964978.jpg</picture>
+			<url>https://art24.me/tproduct/394182394562-jutro-uz-kafu</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="922518077382">
+			<name>Grad u čaši</name>
+			<vendorCode>Grad u čaši</vendorCode>
+			<picture>https://static.tildacdn.com/stor6338-3333-4036-a566-313531393535/89151872.jpg</picture>
+			<url>https://art24.me/tproduct/922518077382-grad-u-ai</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="701247966112">
+			<name>Beli kit</name>
+			<vendorCode>Beli kit</vendorCode>
+			<picture>https://static.tildacdn.com/stor3139-3732-4261-a466-666431353763/23932811.jpg</picture>
+			<url>https://art24.me/tproduct/701247966112-beli-kit</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="170634572192">
+			<name>Kit u tegli</name>
+			<vendorCode>Kit u tegli</vendorCode>
+			<picture>https://static.tildacdn.com/stor6333-6166-4938-a162-313632396566/31584822.jpg</picture>
+			<url>https://art24.me/tproduct/170634572192-kit-u-tegli</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="617318278982">
+			<name>Konji u galopu ljubavi</name>
+			<vendorCode>Konji u galopu ljubavi</vendorCode>
+			<picture>https://static.tildacdn.com/stor6339-6134-4434-b437-643265373038/82943856.jpg</picture>
+			<url>https://art24.me/tproduct/617318278982-konji-u-galopu-ljubavi</url>
+			<count>9999</count>
+			<price>40.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="256014621882">
+			<name>Mali anđeo</name>
+			<vendorCode>Mali anđeo</vendorCode>
+			<picture>https://static.tildacdn.com/stor3963-3539-4763-a661-306436616133/77099870.jpg</picture>
+			<url>https://art24.me/tproduct/256014621882-mali-aneo</url>
+			<count>9999</count>
+			<price>25.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="539194101512">
+			<name>Kvad u starom gradu</name>
+			<vendorCode>Kvad u starom gradu</vendorCode>
+			<picture>https://static.tildacdn.com/stor6630-6430-4662-a162-633964323935/92056156.jpg</picture>
+			<url>https://art24.me/tproduct/539194101512-kvad-u-starom-gradu</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="566756611792">
+			<name>Amfiteatar Koloseum</name>
+			<vendorCode>Amfiteatar Koloseum</vendorCode>
+			<picture>https://static.tildacdn.com/stor6635-3762-4038-b465-333630393262/45835769.jpg</picture>
+			<url>https://art24.me/tproduct/566756611792-amfiteatar-koloseum</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="888176156552">
+			<name>Amfiteatar Koloseum</name>
+			<vendorCode>Amfiteatar Koloseum</vendorCode>
+			<picture>https://static.tildacdn.com/stor3064-3237-4461-b539-643139333861/35949665.jpg</picture>
+			<url>https://art24.me/tproduct/888176156552-amfiteatar-koloseum</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="260915233012">
+			<name>Labubu u svemiru</name>
+			<vendorCode>Labubu u svemiru</vendorCode>
+			<picture>https://static.tildacdn.com/stor3761-6463-4639-a663-613837323234/33438028.jpg</picture>
+			<url>https://art24.me/tproduct/260915233012-labubu-u-svemiru</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="418543098442">
+			<name>Rainbov labubu</name>
+			<vendorCode>Rainbov labubu</vendorCode>
+			<picture>https://static.tildacdn.com/stor3635-6266-4535-a365-386333623362/36021087.jpg</picture>
+			<url>https://art24.me/tproduct/418543098442-rainbov-labubu</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>761485905622</categoryId>
+		</offer>
+		<offer id="551880516892">
+			<name>Pahuljasta čudovišta Labubu</name>
+			<vendorCode>Pahuljasta čudovišta Labubu</vendorCode>
+			<picture>https://static.tildacdn.com/stor3738-6461-4066-b935-343332303934/36887291.jpg</picture>
+			<url>https://art24.me/tproduct/551880516892-pahuljasta-udovita-labubu</url>
+			<count>9999</count>
+			<price>20.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+		</offer>
+		<offer id="488572752092">
+			<name>Mačka u slušalicama</name>
+			<vendorCode>Mačka u slušalicama</vendorCode>
+			<picture>https://static.tildacdn.com/stor3832-3564-4235-a661-653861316633/18302887.jpg</picture>
+			<url>https://art24.me/tproduct/488572752092-maka-u-slualicama</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="479671579032">
+			<name>Uživanje</name>
+			<vendorCode>Uživanje</vendorCode>
+			<picture>https://static.tildacdn.com/stor3361-3564-4234-a235-646632656564/69710760.jpg</picture>
+			<url>https://art24.me/tproduct/479671579032-uivanje</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="284116306202">
+			<name>Moćni konj</name>
+			<vendorCode>Moćni konj</vendorCode>
+			<picture>https://static.tildacdn.com/stor6537-3365-4235-a432-636636623731/48726818.jpg</picture>
+			<url>https://art24.me/tproduct/284116306202-mocni-konj</url>
+			<count>9999</count>
+			<price>40.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="189859433702">
+			<name>Rijeka Crnojevica</name>
+			<vendorCode>Rijeka Crnojevica</vendorCode>
+			<picture>https://static.tildacdn.com/stor6134-6666-4262-b531-646133353336/38900611.jpg</picture>
+			<url>https://art24.me/tproduct/189859433702-rijeka-crnojevica</url>
+			<count>9999</count>
+			<price>30.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="423318529922">
+			<name>Jelen</name>
+			<vendorCode>Jelen</vendorCode>
+			<picture>https://static.tildacdn.com/stor3562-3837-4461-b336-343963616233/27125515.jpg</picture>
+			<url>https://art24.me/tproduct/423318529922-jelen</url>
+			<count>9999</count>
+			<price>60.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="348017072812">
+			<name>Jelen svetli</name>
+			<vendorCode>Jelen svetli</vendorCode>
+			<picture>https://static.tildacdn.com/stor3634-3933-4466-a236-313766343939/46168807.jpg</picture>
+			<url>https://art24.me/tproduct/348017072812-jelen-svetli</url>
+			<count>9999</count>
+			<price>50.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		<offer id="606316484152">
+			<name>Crkve Svetog Petra</name>
+			<vendorCode>Crkve Svetog Petra</vendorCode>
+			<picture>https://static.tildacdn.com/stor3630-3537-4635-b337-383963366438/14005890.jpg</picture>
+			<url>https://art24.me/tproduct/606316484152-crkve-svetog-petra</url>
+			<count>9999</count>
+			<price>35.00</price>
+			<currencyId>EUR</currencyId>
+			<categoryId>185711889052</categoryId>
+			<dimensions>1/50/40</dimensions>
+		</offer>
+		</offers>
+	</shop>
+</yml_catalog>
