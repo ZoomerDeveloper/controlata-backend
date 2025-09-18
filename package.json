@@ -44,6 +44,7 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "@railway/cli": "^4.8.0",
     "basic-ftp": "^5.0.5",
     "nodemon": "^3.0.2"
   }
