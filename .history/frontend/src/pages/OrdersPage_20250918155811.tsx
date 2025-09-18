@@ -663,12 +663,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'name']}
                                   label="Название картины"
-                                  rules={[
-                                    {
-                                      required: pictureTypes[name] || false,
-                                      message: 'Введите название картины'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите название' }]}
                                 >
                                   <Input placeholder="Портрет семьи" />
                                 </Form.Item>
@@ -678,12 +673,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'pictureSizeId']}
                                   label="Размер"
-                                  rules={[
-                                    {
-                                      required: pictureTypes[name] || false,
-                                      message: 'Выберите размер картины'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Выберите размер' }]}
                                 >
                                   <Select placeholder="Выберите размер">
                                     <Option value="small">Маленький (20x30)</Option>
@@ -698,12 +688,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'price']}
                                   label="Цена (€)"
-                                  rules={[
-                                    {
-                                      required: pictureTypes[name] || false,
-                                      message: 'Введите цену картины'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите цену' }]}
                                 >
                                   <InputNumber
                                     style={{ width: '100%' }}
@@ -740,12 +725,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'pictureId']}
                                   label="Выберите картину"
-                                  rules={[
-                                    {
-                                      required: !pictureTypes[name],
-                                      message: 'Выберите готовую картину'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Выберите картину' }]}
                                 >
                                   <Select 
                                     placeholder="Выберите готовую картину"
@@ -842,12 +822,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'price']}
                                   label="Цена за шт. (€)"
-                                  rules={[
-                                    {
-                                      required: !pictureTypes[name],
-                                      message: 'Введите цену за штуку'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите цену' }]}
                                 >
                                   <InputNumber
                                     style={{ width: '100%' }}
@@ -897,12 +872,7 @@ const OrdersPage: React.FC = () => {
                                 {...restField}
                                 name={[name, 'photo']}
                                 label="Фото заказчика"
-                                rules={[
-                                  {
-                                    required: pictureTypes[name] || false,
-                                    message: 'Загрузите фото заказчика'
-                                  }
-                                ]}
+                                rules={[{ required: true, message: 'Загрузите фото' }]}
                               >
                                 <Input 
                                   type="file" 

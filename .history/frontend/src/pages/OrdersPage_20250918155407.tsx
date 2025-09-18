@@ -80,22 +80,8 @@ const OrdersPage: React.FC = () => {
     try {
       const response = await api.getPictures();
       const pictures = (response as any).pictures || response.data || [];
-      // Фильтруем только готовые картины и извлекаем изображения из notes
-      const readyMade = pictures
-        .filter((picture: any) => picture.type === 'READY_MADE')
-        .map((picture: any) => {
-          // Извлекаем URL изображения из заметок
-          const extractImageUrl = (notes: string) => {
-            if (!notes) return null;
-            const match = notes.match(/Изображение:\s*(https:\/\/[^\s]+)/i);
-            return match ? match[1] : null;
-          };
-          
-          return {
-            ...picture,
-            imageUrl: picture.imageUrl || extractImageUrl(picture.notes || '')
-          };
-        });
+      // Фильтруем только готовые картины
+      const readyMade = pictures.filter((picture: any) => picture.type === 'READY_MADE');
       setReadyMadePictures(readyMade);
     } catch (error) {
       console.error('Ошибка загрузки готовых картин:', error);
@@ -585,20 +571,14 @@ const OrdersPage: React.FC = () => {
             <Col span={12}>
               <Form.Item
                 name="totalPrice"
-                label="Общая стоимость"
-                tooltip="Рассчитывается автоматически из выбранных картин"
+                label="Общая стоимость (ручная)"
+                tooltip="Оставьте пустым для автоматического расчета"
               >
                 <InputNumber 
-                  placeholder="€ 0.00" 
-                  style={{ 
-                    width: '100%',
-                    backgroundColor: '#f5f5f5',
-                    color: '#666',
-                    cursor: 'not-allowed'
-                  }}
+                  placeholder="Автоматический расчет" 
+                  style={{ width: '100%' }}
                   formatter={value => `€ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                   parser={value => value!.replace(/€\s?|(,*)/g, '')}
-                  readOnly
                 />
               </Form.Item>
             </Col>
@@ -663,12 +643,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'name']}
                                   label="Название картины"
-                                  rules={[
-                                    {
-                                      required: pictureTypes[name] || false,
-                                      message: 'Введите название картины'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите название' }]}
                                 >
                                   <Input placeholder="Портрет семьи" />
                                 </Form.Item>
@@ -678,12 +653,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'pictureSizeId']}
                                   label="Размер"
-                                  rules={[
-                                    {
-                                      required: pictureTypes[name] || false,
-                                      message: 'Выберите размер картины'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Выберите размер' }]}
                                 >
                                   <Select placeholder="Выберите размер">
                                     <Option value="small">Маленький (20x30)</Option>
@@ -698,12 +668,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'price']}
                                   label="Цена (€)"
-                                  rules={[
-                                    {
-                                      required: pictureTypes[name] || false,
-                                      message: 'Введите цену картины'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите цену' }]}
                                 >
                                   <InputNumber
                                     style={{ width: '100%' }}
@@ -727,7 +692,6 @@ const OrdersPage: React.FC = () => {
                                     placeholder="1"
                                     min={1}
                                     step={1}
-                                    onChange={handleQuantityChange}
                                   />
                                 </Form.Item>
                               </Col>
@@ -740,12 +704,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'pictureId']}
                                   label="Выберите картину"
-                                  rules={[
-                                    {
-                                      required: !pictureTypes[name],
-                                      message: 'Выберите готовую картину'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Выберите картину' }]}
                                 >
                                   <Select 
                                     placeholder="Выберите готовую картину"
@@ -755,63 +714,26 @@ const OrdersPage: React.FC = () => {
                                       (option?.children as unknown as string)?.toLowerCase().includes(input.toLowerCase())
                                     }
                                     onChange={(value) => handlePictureSelect(value, name)}
-                                    style={{ minHeight: '40px' }}
-                                    dropdownStyle={{ maxHeight: '300px' }}
                                   >
                                     {(readyMadePictures || []).map((picture: any) => (
                                       <Option key={picture.id} value={picture.id}>
-                                        <div style={{ 
-                                          display: 'flex', 
-                                          alignItems: 'center', 
-                                          gap: 8,
-                                          minHeight: '40px',
-                                          padding: '4px 0'
-                                        }}>
-                                          {picture.imageUrl ? (
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                          {picture.imageUrl && (
                                             <img 
                                               src={picture.imageUrl} 
                                               alt={picture.name}
                                               style={{ 
-                                                width: 32, 
-                                                height: 32, 
+                                                width: 30, 
+                                                height: 30, 
                                                 objectFit: 'cover',
                                                 borderRadius: 4,
-                                                border: '1px solid #d9d9d9',
-                                                flexShrink: 0
+                                                border: '1px solid #d9d9d9'
                                               }}
                                             />
-                                          ) : (
-                                            <div style={{
-                                              width: 32,
-                                              height: 32,
-                                              backgroundColor: '#f5f5f5',
-                                              borderRadius: 4,
-                                              border: '1px solid #d9d9d9',
-                                              display: 'flex',
-                                              alignItems: 'center',
-                                              justifyContent: 'center',
-                                              flexShrink: 0
-                                            }}>
-                                              📷
-                                            </div>
                                           )}
-                                          <div style={{ flex: 1, minWidth: 0 }}>
-                                            <div style={{ 
-                                              fontWeight: 'bold',
-                                              fontSize: '14px',
-                                              lineHeight: '1.2',
-                                              marginBottom: '2px',
-                                              overflow: 'hidden',
-                                              textOverflow: 'ellipsis',
-                                              whiteSpace: 'nowrap'
-                                            }}>
-                                              {picture.name}
-                                            </div>
-                                            <div style={{ 
-                                              fontSize: '12px', 
-                                              color: '#666',
-                                              lineHeight: '1.2'
-                                            }}>
+                                          <div>
+                                            <div style={{ fontWeight: 'bold' }}>{picture.name}</div>
+                                            <div style={{ fontSize: '12px', color: '#666' }}>
                                               {picture.pictureSize?.name} - €{picture.price.toFixed(2)}
                                             </div>
                                           </div>
@@ -833,7 +755,6 @@ const OrdersPage: React.FC = () => {
                                     placeholder="1"
                                     min={1}
                                     step={1}
-                                    onChange={handleQuantityChange}
                                   />
                                 </Form.Item>
                               </Col>
@@ -842,12 +763,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'price']}
                                   label="Цена за шт. (€)"
-                                  rules={[
-                                    {
-                                      required: !pictureTypes[name],
-                                      message: 'Введите цену за штуку'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите цену' }]}
                                 >
                                   <InputNumber
                                     style={{ width: '100%' }}
@@ -855,7 +771,6 @@ const OrdersPage: React.FC = () => {
                                     min={0}
                                     step={0.01}
                                     precision={2}
-                                    onChange={handlePriceChange}
                                   />
                                 </Form.Item>
                               </Col>
@@ -897,12 +812,7 @@ const OrdersPage: React.FC = () => {
                                 {...restField}
                                 name={[name, 'photo']}
                                 label="Фото заказчика"
-                                rules={[
-                                  {
-                                    required: pictureTypes[name] || false,
-                                    message: 'Загрузите фото заказчика'
-                                  }
-                                ]}
+                                rules={[{ required: true, message: 'Загрузите фото' }]}
                               >
                                 <Input 
                                   type="file" 

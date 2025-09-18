@@ -464,19 +464,19 @@ const PicturesPage: React.FC = () => {
                 }}
               />
             </TabPane>
-            <TabPane tab="Готовые картины" key="ready_made">
+            <TabPane tab="В работе" key="in_progress">
               <Table
                 columns={columns}
-                dataSource={(pictures || []).filter(p => p.type === 'READY_MADE')}
+                dataSource={inProgressPictures}
                 loading={loading}
                 rowKey="id"
                 pagination={false}
               />
             </TabPane>
-            <TabPane tab="По фото заказчика" key="custom_photo">
+            <TabPane tab="Завершенные" key="completed">
               <Table
                 columns={columns}
-                dataSource={(pictures || []).filter(p => p.type === 'CUSTOM_PHOTO')}
+                dataSource={completedPictures}
                 loading={loading}
                 rowKey="id"
                 pagination={false}

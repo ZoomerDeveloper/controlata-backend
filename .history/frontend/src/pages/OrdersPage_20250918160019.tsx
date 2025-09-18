@@ -842,12 +842,7 @@ const OrdersPage: React.FC = () => {
                                   {...restField}
                                   name={[name, 'price']}
                                   label="Цена за шт. (€)"
-                                  rules={[
-                                    {
-                                      required: !pictureTypes[name],
-                                      message: 'Введите цену за штуку'
-                                    }
-                                  ]}
+                                  rules={[{ required: true, message: 'Введите цену' }]}
                                 >
                                   <InputNumber
                                     style={{ width: '100%' }}

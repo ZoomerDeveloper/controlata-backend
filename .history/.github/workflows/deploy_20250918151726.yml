@@ -1,0 +1,73 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run tests (if any)
+      run: npm test --if-present
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Check Prisma schema
+      run: |
+        if [ -n "$DATABASE_URL" ]; then
+          npx prisma validate --schema=./prisma/schema.prisma
+        else
+          echo "DATABASE_URL not set, skipping Prisma validation"
+        fi
+      env:
+        DATABASE_URL: "postgresql://dummy:dummy@localhost:5432/dummy"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Install Railway CLI
+      run: npm install -g @railway/cli
+      
+    - name: Login to Railway
+      run: railway login --token ${{ secrets.RAILWAY_TOKEN }}
+      
+    - name: Link Railway project
+      run: railway link --service controlata-backend
+      
+    - name: Deploy to Railway
+      run: railway up --detach

@@ -52,6 +52,11 @@ const PicturesPage: React.FC = () => {
     { value: 'CUSTOM_PHOTO', label: 'По фото заказчика' }
   ];
 
+  const pictureStatuses = [
+    { value: 'IN_PROGRESS', label: 'В работе', color: 'blue' },
+    { value: 'COMPLETED', label: 'Завершена', color: 'green' },
+    { value: 'CANCELLED', label: 'Отменена', color: 'red' }
+  ];
 
   useEffect(() => {
     fetchPictures();
@@ -337,6 +342,8 @@ const PicturesPage: React.FC = () => {
     }
   ];
 
+  const inProgressPictures = (pictures || []).filter(p => p.status === 'IN_PROGRESS');
+  const completedPictures = (pictures || []).filter(p => p.status === 'COMPLETED');
   const totalRevenue = (pictures || []).reduce((sum, p) => sum + p.price, 0);
   const totalCost = (pictures || []).reduce((sum, p) => sum + (p.costPrice || 0), 0);
   const totalProfit = totalRevenue - totalCost;
@@ -394,8 +401,8 @@ const PicturesPage: React.FC = () => {
           <Col xs={24} sm={8}>
             <Card>
               <Statistic
-                title="Всего картин"
-                value={(pictures || []).length}
+                title="В работе"
+                value={(inProgressPictures || []).length}
                 valueStyle={{ color: '#1890ff' }}
               />
             </Card>
@@ -403,8 +410,8 @@ const PicturesPage: React.FC = () => {
           <Col xs={24} sm={8}>
             <Card>
               <Statistic
-                title="Готовые картины"
-                value={(pictures || []).filter(p => p.type === 'READY_MADE').length}
+                title="Завершено"
+                value={(completedPictures || []).length}
                 valueStyle={{ color: '#3f8600' }}
               />
             </Card>
@@ -464,19 +471,19 @@ const PicturesPage: React.FC = () => {
                 }}
               />
             </TabPane>
-            <TabPane tab="Готовые картины" key="ready_made">
+            <TabPane tab="В работе" key="in_progress">
               <Table
                 columns={columns}
-                dataSource={(pictures || []).filter(p => p.type === 'READY_MADE')}
+                dataSource={inProgressPictures}
                 loading={loading}
                 rowKey="id"
                 pagination={false}
               />
             </TabPane>
-            <TabPane tab="По фото заказчика" key="custom_photo">
+            <TabPane tab="Завершенные" key="completed">
               <Table
                 columns={columns}
-                dataSource={(pictures || []).filter(p => p.type === 'CUSTOM_PHOTO')}
+                dataSource={completedPictures}
                 loading={loading}
                 rowKey="id"
                 pagination={false}
@@ -599,6 +606,21 @@ const PicturesPage: React.FC = () => {
                   style={{ width: '100%' }}
                   placeholder="0"
                 />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+              <Form.Item
+                name="status"
+                label="Статус"
+                initialValue="IN_PROGRESS"
+              >
+                <Select placeholder="Выберите статус">
+                  {pictureStatuses.map(status => (
+                    <Option key={status.value} value={status.value}>
+                      {status.label}
+                    </Option>
+                  ))}
+                </Select>
               </Form.Item>
             </Col>
           </Row>
