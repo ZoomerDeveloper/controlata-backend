@@ -144,15 +144,12 @@ const OrdersPage: React.FC = () => {
   const handlePictureSelect = (pictureId: string, fieldName: number) => {
     const selectedPicture = readyMadePictures.find(p => p.id === pictureId);
     if (selectedPicture) {
-      console.log('🔍 Выбрана готовая картина:', selectedPicture);
-      console.log('🔍 Тип картины для поля', fieldName, ':', pictureTypes[fieldName]);
-      
-      // Автоматически заполняем цену (для готовых картин не устанавливаем pictureSizeId)
+      // Автоматически заполняем цену и размер
       form.setFieldsValue({
         pictures: {
           [fieldName]: {
-            price: selectedPicture.price
-            // Не устанавливаем pictureSizeId для готовых картин
+            price: selectedPicture.price,
+            pictureSizeId: selectedPicture.pictureSizeId
           }
         }
       });
