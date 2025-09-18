@@ -161,9 +161,6 @@ app.use('/api/dashboard', authMiddleware, dashboardRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/warehouse', authMiddleware, warehouseRoutes);
 
-// CORS Proxy для обхода ограничений браузера
-app.use('/cors-proxy', corsProxyRoutes);
-
 // 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({ 

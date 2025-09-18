@@ -21,7 +21,6 @@ const reportRoutes = require('./routes/reports');
 const dashboardRoutes = require('./routes/dashboard');
 const uploadRoutes = require('./routes/upload');
 const warehouseRoutes = require('./routes/warehouse');
-const corsProxyRoutes = require('./routes/cors-proxy');
 
 // Import middleware
 const authMiddleware = require('./middleware/auth');
@@ -160,9 +159,6 @@ app.use('/api/reports', authMiddleware, reportRoutes);
 app.use('/api/dashboard', authMiddleware, dashboardRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/warehouse', authMiddleware, warehouseRoutes);
-
-// CORS Proxy для обхода ограничений браузера
-app.use('/cors-proxy', corsProxyRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {

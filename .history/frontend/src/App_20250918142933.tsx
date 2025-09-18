@@ -50,10 +50,6 @@ const AppRoutes: React.FC = () => {
         path="/login-proxy" 
         element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPageProxy />} 
       />
-      <Route 
-        path="/login-cors" 
-        element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPageCors />} 
-      />
       <Route
         path="/*"
         element={
