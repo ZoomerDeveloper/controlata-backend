@@ -157,16 +157,16 @@ const WarehousePage: React.FC = () => {
         });
         message.success('Материал добавлен на склад');
       } else if (movementType === 'remove') {
-        await api.removeMaterialFromStock({
-          materialId: selectedMaterial?.id!,
+        await api.post('/warehouse/materials/remove', {
+          materialId: selectedMaterial?.id,
           quantity: values.quantity,
           reason: values.reason,
           notes: values.notes
         });
         message.success('Материал списан со склада');
       } else if (movementType === 'adjust') {
-        await api.adjustStock({
-          materialId: selectedMaterial?.id!,
+        await api.post('/warehouse/materials/adjust', {
+          materialId: selectedMaterial?.id,
           newQuantity: values.newQuantity,
           reason: values.reason,
           notes: values.notes

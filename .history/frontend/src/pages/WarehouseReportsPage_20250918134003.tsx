@@ -250,7 +250,7 @@ const WarehouseReportsPage: React.FC = () => {
           'MANUAL': { color: 'purple', text: 'Ручная' }
         };
         const config = typeMap[type as keyof typeof typeMap];
-        return <Tag color={config.color}>{config.text}</Tag>;
+        return <Tag color={config.color} size="small">{config.text}</Tag>;
       }
     },
     {

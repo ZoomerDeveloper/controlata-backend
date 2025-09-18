@@ -44,7 +44,6 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
-    "basic-ftp": "^5.0.5",
     "nodemon": "^3.0.2"
   }
 }

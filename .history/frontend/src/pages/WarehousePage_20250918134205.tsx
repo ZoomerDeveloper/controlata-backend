@@ -98,9 +98,9 @@ const WarehousePage: React.FC = () => {
         api.getWarehouseStats()
       ]);
 
-      setMaterials(materialsResponse.materials || []);
-      setMovements(movementsResponse.movements || []);
-      setStats(statsResponse.stats || null);
+      setMaterials(materialsResponse.data.materials || []);
+      setMovements(movementsResponse.data.movements || []);
+      setStats(statsResponse.data.stats || null);
     } catch (error) {
       message.error('Ошибка загрузки данных склада');
     } finally {
@@ -139,8 +139,8 @@ const WarehousePage: React.FC = () => {
 
   const fetchMaterialMovements = async (materialId: string) => {
     try {
-      const response = await api.getMaterialMovements(materialId);
-      setMovements(response.movements || []);
+      const response = await api.get(`/warehouse/materials/${materialId}/movements`);
+      setMovements(response.data.movements || []);
     } catch (error) {
       message.error('Ошибка загрузки истории движений');
     }
@@ -149,24 +149,24 @@ const WarehousePage: React.FC = () => {
   const handleSubmit = async (values: any) => {
     try {
       if (movementType === 'add') {
-        await api.addMaterialToStock({
-          materialId: selectedMaterial?.id!,
+        await api.post('/warehouse/materials/add', {
+          materialId: selectedMaterial?.id,
           quantity: values.quantity,
           reason: values.reason,
           notes: values.notes
         });
         message.success('Материал добавлен на склад');
       } else if (movementType === 'remove') {
-        await api.removeMaterialFromStock({
-          materialId: selectedMaterial?.id!,
+        await api.post('/warehouse/materials/remove', {
+          materialId: selectedMaterial?.id,
           quantity: values.quantity,
           reason: values.reason,
           notes: values.notes
         });
         message.success('Материал списан со склада');
       } else if (movementType === 'adjust') {
-        await api.adjustStock({
-          materialId: selectedMaterial?.id!,
+        await api.post('/warehouse/materials/adjust', {
+          materialId: selectedMaterial?.id,
           newQuantity: values.newQuantity,
           reason: values.reason,
           notes: values.notes
