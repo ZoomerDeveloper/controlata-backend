@@ -61,7 +61,6 @@ const corsOptions = {
     'http://localhost:3000',
     'http://localhost:3001', 
     'https://admin-art24.online',
-    'https://www.admin-art24.online',
     'https://art24.me',
     'https://www.art24.me'
   ],
@@ -159,10 +158,6 @@ app.get('/api', (req, res) => {
   res.json({ 
     message: 'API работает!',
     timestamp: new Date().toISOString(),
-    cors: {
-      origin: req.headers.origin,
-      allowed: true
-    },
     routes: [
       '/api/auth',
       '/api/users', 
@@ -177,20 +172,6 @@ app.get('/api', (req, res) => {
       '/api/warehouse',
       '/cors-proxy'
     ]
-  });
-});
-
-// CORS test endpoint
-app.get('/api/cors-test', (req, res) => {
-  res.json({
-    message: 'CORS тест успешен!',
-    origin: req.headers.origin,
-    timestamp: new Date().toISOString(),
-    headers: {
-      origin: req.headers.origin,
-      referer: req.headers.referer,
-      userAgent: req.headers['user-agent']
-    }
   });
 });
 

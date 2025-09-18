@@ -159,10 +159,6 @@ app.get('/api', (req, res) => {
   res.json({ 
     message: 'API работает!',
     timestamp: new Date().toISOString(),
-    cors: {
-      origin: req.headers.origin,
-      allowed: true
-    },
     routes: [
       '/api/auth',
       '/api/users', 
@@ -177,20 +173,6 @@ app.get('/api', (req, res) => {
       '/api/warehouse',
       '/cors-proxy'
     ]
-  });
-});
-
-// CORS test endpoint
-app.get('/api/cors-test', (req, res) => {
-  res.json({
-    message: 'CORS тест успешен!',
-    origin: req.headers.origin,
-    timestamp: new Date().toISOString(),
-    headers: {
-      origin: req.headers.origin,
-      referer: req.headers.referer,
-      userAgent: req.headers['user-agent']
-    }
   });
 });
 
