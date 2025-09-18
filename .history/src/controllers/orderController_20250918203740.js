@@ -292,14 +292,8 @@ const createOrder = async (req, res) => {
     });
   } catch (error) {
     console.error('Create order error:', error);
-    logger.error('Create order error:', { 
-      error: error.message, 
-      stack: error.stack,
-      body: req.body 
-    });
     res.status(500).json({
-      error: 'Ошибка при создании заказа',
-      details: error.message
+      error: 'Ошибка при создании заказа'
     });
   }
 };
