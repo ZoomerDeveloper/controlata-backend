@@ -204,27 +204,11 @@ const OrdersPage: React.FC = () => {
 
   const handleSubmit = async (values: any) => {
     try {
-      // Обрабатываем картины - добавляем тип и правильные поля
-      const processedPictures = (values.pictures || []).map((picture: any, index: number) => {
-        const isCustomPhoto = pictureTypes[index];
-        
-        if (isCustomPhoto) {
-          // Для картин по фото - оставляем все поля
-          return {
-            ...picture,
-            type: 'CUSTOM_PHOTO'
-          };
-        } else {
-          // Для готовых картин - оставляем только нужные поля
-          return {
-            pictureId: picture.pictureId,
-            price: picture.price,
-            quantity: picture.quantity || 1,
-            description: picture.description,
-            type: 'READY_MADE'
-          };
-        }
-      });
+      // Обрабатываем картины - добавляем тип
+      const processedPictures = (values.pictures || []).map((picture: any) => ({
+        ...picture,
+        type: pictureTypes[picture.key] ? 'CUSTOM_PHOTO' : 'READY_MADE'
+      }));
 
       const orderData = {
         ...values,

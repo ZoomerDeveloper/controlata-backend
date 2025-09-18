@@ -207,23 +207,16 @@ const OrdersPage: React.FC = () => {
       // Обрабатываем картины - добавляем тип и правильные поля
       const processedPictures = (values.pictures || []).map((picture: any, index: number) => {
         const isCustomPhoto = pictureTypes[index];
-        
-        if (isCustomPhoto) {
-          // Для картин по фото - оставляем все поля
-          return {
-            ...picture,
-            type: 'CUSTOM_PHOTO'
-          };
-        } else {
-          // Для готовых картин - оставляем только нужные поля
-          return {
-            pictureId: picture.pictureId,
-            price: picture.price,
-            quantity: picture.quantity || 1,
-            description: picture.description,
-            type: 'READY_MADE'
-          };
-        }
+        return {
+          ...picture,
+          type: isCustomPhoto ? 'CUSTOM_PHOTO' : 'READY_MADE',
+          // Для готовых картин убираем поля, которые не нужны
+          ...(isCustomPhoto ? {} : {
+            name: undefined,
+            pictureSizeId: undefined,
+            photo: undefined
+          })
+        };
       });
 
       const orderData = {
