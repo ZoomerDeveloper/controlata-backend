@@ -162,8 +162,6 @@ const OrdersPage: React.FC = () => {
   };
 
   const handlePictureTypeChange = (fieldName: number, isCustomPhoto: boolean) => {
-    console.log('🔍 Смена типа картины:', { fieldName, isCustomPhoto });
-    
     setPictureTypes(prev => ({
       ...prev,
       [fieldName]: isCustomPhoto
@@ -180,8 +178,6 @@ const OrdersPage: React.FC = () => {
         }
       }
     });
-    
-    console.log('🔍 Очищены поля для поля:', fieldName);
   };
 
   const calculateTotalPrice = (pictures: any[]) => {
