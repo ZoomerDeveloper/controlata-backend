@@ -11,7 +11,7 @@ import {
   Col,
   Divider,
 } from 'antd';
-import { UserOutlined, LockOutlined, AppstoreOutlined } from '@ant-design/icons';
+import { UserOutlined, LockOutlined, PaletteOutlined } from '@ant-design/icons';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -60,7 +60,7 @@ const LoginPage: React.FC = () => {
               borderRadius: '16px',
               boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
             }}>
-              <AppstoreOutlined style={{ 
+              <PaletteOutlined style={{ 
                 fontSize: '64px', 
                 color: '#fff',
                 marginBottom: '20px'

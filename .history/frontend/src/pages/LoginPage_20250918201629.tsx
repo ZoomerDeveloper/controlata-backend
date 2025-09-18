@@ -60,7 +60,7 @@ const LoginPage: React.FC = () => {
               borderRadius: '16px',
               boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
             }}>
-              <AppstoreOutlined style={{ 
+              <PaintBrushOutlined style={{ 
                 fontSize: '64px', 
                 color: '#fff',
                 marginBottom: '20px'
