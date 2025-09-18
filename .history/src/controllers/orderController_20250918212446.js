@@ -461,41 +461,6 @@ const updateOrderStatus = async (req, res) => {
     // Списываем материалы при переходе в статус "В работе", "Завершен" или "Доставлен"
     if (['IN_PROGRESS', 'COMPLETED', 'DELIVERED'].includes(status)) {
       for (const picture of order.pictures) {
-        // Если у картины нет материалов (например, для картин по фото), создаем их
-        if (!picture.materials || picture.materials.length === 0) {
-          if (picture.type === 'CUSTOM_PHOTO' && picture.pictureSizeId) {
-            try {
-              const pictureMaterialService = require('../services/pictureMaterialService');
-              await pictureMaterialService.createStandardMaterialsForPicture(
-                picture.id,
-                picture.pictureSizeId,
-                'CUSTOM_PHOTO'
-              );
-              console.log('✅ Материалы созданы для картины по фото при изменении статуса:', picture.id);
-              
-              // Перезагружаем картину с материалами
-              const updatedPicture = await prisma.picture.findUnique({
-                where: { id: picture.id },
-                include: {
-                  materials: {
-                    include: {
-                      material: true
-                    }
-                  }
-                }
-              });
-              
-              if (updatedPicture && updatedPicture.materials) {
-                picture.materials = updatedPicture.materials;
-              }
-            } catch (materialError) {
-              console.error('❌ Ошибка создания материалов для картины по фото:', materialError);
-              // Продолжаем без прерывания
-            }
-          }
-        }
-
-        // Списываем материалы
         if (picture.materials && picture.materials.length > 0) {
           for (const pictureMaterial of picture.materials) {
             try {
@@ -538,27 +503,7 @@ const updateOrderStatus = async (req, res) => {
     // Если заказ отменен, возвращаем материалы на склад
     if (status === 'CANCELLED') {
       for (const picture of order.pictures) {
-        if (picture.materials && picture.materials.length > 0) {
-          for (const pictureMaterial of picture.materials) {
-            try {
-              const warehouseService = require('../services/warehouseService');
-              await warehouseService.addMaterialToStock(
-                pictureMaterial.materialId,
-                pictureMaterial.quantity,
-                `Возврат материалов при отмене заказа: ${order.orderNumber}`,
-                order.id
-              );
-            } catch (error) {
-              logger.error('Error returning material to stock during cancellation', {
-                materialId: pictureMaterial.materialId,
-                quantity: pictureMaterial.quantity,
-                orderId: order.id,
-                pictureId: picture.id,
-                error: error.message
-              });
-            }
-          }
-        }
+        await stockService.returnMaterialsToStock(picture.id);
       }
     }
 
