@@ -55,10 +55,6 @@ const AppRoutes: React.FC = () => {
         path="/login-cors" 
         element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPageCors />} 
       />
-      <Route 
-        path="/login-direct" 
-        element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPageDirect />} 
-      />
       <Route
         path="/*"
         element={
