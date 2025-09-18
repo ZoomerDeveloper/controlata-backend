@@ -142,8 +142,7 @@ app.get('/api', (req, res) => {
       '/api/expenses',
       '/api/reports',
       '/api/dashboard',
-      '/api/warehouse',
-      '/cors-proxy'
+      '/api/warehouse'
     ]
   });
 });
