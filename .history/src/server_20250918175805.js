@@ -117,7 +117,7 @@ app.options('*', (req, res) => {
   res.sendStatus(204);
 });
 
-// Дополнительный CORS middleware для принудительной установки правильных заголовков
+// Дополнительный CORS middleware для гарантии (только для логирования)
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   
@@ -129,13 +129,9 @@ app.use((req, res, next) => {
     referer: req.headers.referer
   });
   
-  // Принудительно устанавливаем правильные CORS заголовки для разрешенных origin
-  if (origin && allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
-    res.header('Access-Control-Allow-Credentials', 'true');
-    console.log('✅ CORS: Принудительно установлен origin:', origin);
-  } else if (origin) {
-    console.log('❌ CORS: Origin не разрешен:', origin);
+  // Для основных запросов (не OPTIONS) - CORS уже обработан выше
+  if (req.method !== 'OPTIONS') {
+    console.log('🌐 Основной запрос от origin:', origin);
   }
 
   next();

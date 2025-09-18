@@ -67,16 +67,10 @@ const allowedOrigins = [
 
 const corsOptions = {
   origin: (origin, callback) => {
-    console.log('🔍 CORS Origin check:', { origin, allowedOrigins });
-    
-    // Для запросов без origin (например, Postman) - НЕ разрешаем с credentials
-    if (!origin) {
-      console.log('⚠️ CORS: Запрос без origin - отклоняем из-за credentials: true');
-      return callback(new Error('Origin required for credentials'));
-    }
+    // Разрешаем запросы без origin (например, мобильные приложения, Postman)
+    if (!origin) return callback(null, true);
     
     if (allowedOrigins.includes(origin)) {
-      console.log('✅ CORS: Origin разрешен:', origin);
       callback(null, true);
     } else {
       console.log('❌ CORS: Origin не разрешен:', origin);
@@ -103,7 +97,7 @@ app.options('*', (req, res) => {
   });
   
   if (allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
+    res.header('Access-Control-Allow-Origin', origin);
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin');
@@ -111,13 +105,12 @@ app.options('*', (req, res) => {
     console.log('✅ OPTIONS: CORS заголовки установлены для', origin);
   } else {
     console.log('❌ OPTIONS: Origin не разрешен:', origin);
-    // Не устанавливаем заголовки для неразрешенных origin
   }
   
   res.sendStatus(204);
 });
 
-// Дополнительный CORS middleware для принудительной установки правильных заголовков
+// Дополнительный CORS middleware для гарантии (только для логирования)
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   
@@ -129,13 +122,9 @@ app.use((req, res, next) => {
     referer: req.headers.referer
   });
   
-  // Принудительно устанавливаем правильные CORS заголовки для разрешенных origin
-  if (origin && allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
-    res.header('Access-Control-Allow-Credentials', 'true');
-    console.log('✅ CORS: Принудительно установлен origin:', origin);
-  } else if (origin) {
-    console.log('❌ CORS: Origin не разрешен:', origin);
+  // Для основных запросов (не OPTIONS) - CORS уже обработан выше
+  if (req.method !== 'OPTIONS') {
+    console.log('🌐 Основной запрос от origin:', origin);
   }
 
   next();
