@@ -146,7 +146,6 @@ const OrdersPage: React.FC = () => {
     if (selectedPicture) {
       console.log('🔍 Выбрана готовая картина:', selectedPicture);
       console.log('🔍 Тип картины для поля', fieldName, ':', pictureTypes[fieldName]);
-      console.log('🔍 Все pictureTypes:', pictureTypes);
       
       // Автоматически заполняем цену (для готовых картин не устанавливаем pictureSizeId)
       form.setFieldsValue({
