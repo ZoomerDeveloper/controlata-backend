@@ -230,7 +230,7 @@ const OrdersPage: React.FC = () => {
           if (picture.photo && picture.photo.file) {
             try {
               const uploadResponse = await api.uploadPicture(picture.photo.file);
-              imageUrl = uploadResponse.url;
+              imageUrl = uploadResponse.file?.url || uploadResponse.url;
             } catch (error) {
               console.error('Ошибка загрузки фото:', error);
               message.error('Ошибка загрузки фото');

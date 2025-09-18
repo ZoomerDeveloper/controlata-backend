@@ -213,7 +213,7 @@ const OrdersPage: React.FC = () => {
   const handleSubmit = async (values: any) => {
     try {
       // Обрабатываем картины - добавляем тип и правильные поля
-      const processedPictures = await Promise.all((values.pictures || []).map(async (picture: any, index: number) => {
+      const processedPictures = (values.pictures || []).map((picture: any, index: number) => {
         // Если pictureTypes[index] не определен, считаем что это готовая картина (false)
         const isCustomPhoto = pictureTypes[index] === true;
         
@@ -225,24 +225,11 @@ const OrdersPage: React.FC = () => {
         });
         
         if (isCustomPhoto) {
-          // Для картин по фото - загружаем файл и получаем URL
-          let imageUrl = null;
-          if (picture.photo && picture.photo.file) {
-            try {
-              const uploadResponse = await api.uploadPicture(picture.photo.file);
-              imageUrl = uploadResponse.url;
-            } catch (error) {
-              console.error('Ошибка загрузки фото:', error);
-              message.error('Ошибка загрузки фото');
-            }
-          }
-          
-          // Убираем файл и оставляем только данные
+          // Для картин по фото - убираем файл и оставляем только данные
           const { photo, ...pictureData } = picture;
           return {
             ...pictureData,
-            type: 'CUSTOM_PHOTO',
-            imageUrl
+            type: 'CUSTOM_PHOTO'
           };
         } else {
           // Для готовых картин - оставляем только нужные поля
@@ -257,7 +244,7 @@ const OrdersPage: React.FC = () => {
           console.log('🔍 Обработанная готовая картина:', processedPicture);
           return processedPicture;
         }
-      }));
+      });
 
       const orderData = {
         ...values,
