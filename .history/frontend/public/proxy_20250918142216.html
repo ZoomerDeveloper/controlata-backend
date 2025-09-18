@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Proxy</title>
+</head>
+<body>
+    <script>
+        // CORS Proxy для обхода ограничений браузера
+        const API_URL = 'https://controlata-production.up.railway.app/api';
+        
+        // Функция для проксирования запросов
+        async function proxyRequest(endpoint, method = 'GET', data = null) {
+            try {
+                const response = await fetch(`${API_URL}${endpoint}`, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: data ? JSON.stringify(data) : null
+                });
+                
+                const result = await response.json();
+                return { success: true, data: result, status: response.status };
+            } catch (error) {
+                return { success: false, error: error.message };
+            }
+        }
+        
+        // Экспортируем функцию в глобальную область
+        window.proxyRequest = proxyRequest;
+        
+        console.log('CORS Proxy готов к использованию');
+    </script>
+</body>
+</html>

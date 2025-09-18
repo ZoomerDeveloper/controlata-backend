@@ -45,10 +45,6 @@ const AppRoutes: React.FC = () => {
         path="/login" 
         element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPage />} 
       />
-      <Route 
-        path="/login-proxy" 
-        element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPageProxy />} 
-      />
       <Route
         path="/*"
         element={

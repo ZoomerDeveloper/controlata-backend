@@ -195,10 +195,6 @@ process.on('SIGTERM', async () => {
 
 const PORT = process.env.PORT || 8080;
 
-// Принудительная версия для обновления CORS
-const CORS_VERSION = 'v2.0.0';
-console.log(`🚀 Запуск сервера с CORS ${CORS_VERSION}`);
-
 app.listen(PORT, () => {
   console.log(`🚀 Сервер запущен на порту ${PORT}`);
   console.log(`📊 Режим: ${process.env.NODE_ENV || 'development'}`);

@@ -36,11 +36,8 @@ class ApiService {
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
       },
-      withCredentials: false, // Отключаем credentials для обхода CORS
+      withCredentials: true, // Важно для CORS
     });
 
     // Добавляем токен к каждому запросу
