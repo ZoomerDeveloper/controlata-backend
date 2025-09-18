@@ -386,26 +386,6 @@ const updateOrderStatus = async (req, res) => {
     const { id } = req.params;
     const { status } = req.body;
 
-    // Получаем текущий заказ с картинами и материалами
-    const currentOrder = await prisma.order.findUnique({
-      where: { id },
-      include: {
-        pictures: {
-          include: {
-            materials: {
-              include: {
-                material: true
-              }
-            }
-          }
-        }
-      }
-    });
-
-    if (!currentOrder) {
-      return res.status(404).json({ error: 'Заказ не найден' });
-    }
-
     const order = await prisma.order.update({
       where: { id },
       data: {
@@ -413,59 +393,9 @@ const updateOrderStatus = async (req, res) => {
         ...(status === 'COMPLETED' && { completedAt: new Date() })
       },
       include: {
-        pictures: {
-          include: {
-            materials: {
-              include: {
-                material: true
-              }
-            }
-          }
-        }
+        pictures: true
       }
     });
-
-    // Списываем материалы при переходе в статус "В работе", "Завершен" или "Доставлен"
-    if (['IN_PROGRESS', 'COMPLETED', 'DELIVERED'].includes(status)) {
-      for (const picture of order.pictures) {
-        if (picture.materials && picture.materials.length > 0) {
-          for (const pictureMaterial of picture.materials) {
-            try {
-              const warehouseService = require('../services/warehouseService');
-              const result = await warehouseService.removeMaterialFromStock(
-                pictureMaterial.materialId,
-                pictureMaterial.quantity,
-                `Изменение статуса заказа на: ${status}`,
-                order.id,
-                'ORDER',
-                `Заказ: ${order.orderNumber}, Картина: ${picture.name}, Статус: ${status}`
-              );
-
-              if (result.isNegative) {
-                logger.warn('Material stock went negative during status update', {
-                  materialId: pictureMaterial.materialId,
-                  quantity: pictureMaterial.quantity,
-                  newQuantity: result.newQuantity,
-                  orderId: order.id,
-                  pictureId: picture.id,
-                  status: status
-                });
-              }
-            } catch (error) {
-              logger.error('Error removing material from stock during status update', {
-                materialId: pictureMaterial.materialId,
-                quantity: pictureMaterial.quantity,
-                orderId: order.id,
-                pictureId: picture.id,
-                status: status,
-                error: error.message
-              });
-              // Не прерываем обновление статуса, только логируем ошибку
-            }
-          }
-        }
-      }
-    }
 
     // Если заказ отменен, возвращаем материалы на склад
     if (status === 'CANCELLED') {
