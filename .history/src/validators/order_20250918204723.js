@@ -35,33 +35,20 @@ const createOrderSchema = Joi.object({
   status: Joi.string().valid('PENDING', 'IN_PROGRESS', 'COMPLETED', 'CANCELLED', 'DELIVERED').optional(),
   notes: Joi.string().max(1000).optional(),
   pictures: Joi.array().items(
-    Joi.object({
-      type: Joi.string().valid('READY_MADE', 'CUSTOM_PHOTO').required(),
-      // Общие поля для всех картин
-      price: Joi.number().positive().required(),
-      quantity: Joi.number().positive().default(1).optional(),
-      description: Joi.string().max(500).optional(),
-      // Поля для готовых картин
-      pictureId: Joi.when('type', {
-        is: 'READY_MADE',
-        then: Joi.string().required(),
-        otherwise: Joi.forbidden()
-      }),
-      // Поля для картин по фото
-      name: Joi.when('type', {
-        is: 'CUSTOM_PHOTO',
-        then: Joi.string().min(1).max(200).required(),
-        otherwise: Joi.forbidden()
-      }),
-      pictureSizeId: Joi.when('type', {
-        is: 'CUSTOM_PHOTO',
-        then: Joi.string().required(),
-        otherwise: Joi.forbidden()
-      }),
-      photo: Joi.string().optional(),
-      imageUrl: Joi.string().optional(),
-      workHours: Joi.number().min(0).optional(),
-      notes: Joi.string().max(500).optional()
+    Joi.alternatives().conditional(Joi.object({ type: Joi.string() }).unknown(), {
+      switch: [
+        {
+          is: Joi.object({ type: Joi.string().valid('READY_MADE') }).unknown(),
+          then: readyMadePictureSchema
+        },
+        {
+          is: Joi.object({ type: Joi.string().valid('CUSTOM_PHOTO') }).unknown(),
+          then: customPhotoPictureSchema
+        }
+      ],
+      otherwise: Joi.object({
+        type: Joi.string().valid('READY_MADE', 'CUSTOM_PHOTO').required()
+      }).unknown()
     })
   ).optional()
 });
