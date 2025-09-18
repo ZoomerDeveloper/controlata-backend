@@ -55,76 +55,63 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false
 }));
 
-// CORS настройки - оптимизированы для Railway с кастомным доменом
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:3001', 
-  'https://admin-art24.online',
-  'https://www.admin-art24.online',
-  'https://art24.me',
-  'https://www.art24.me'
-];
-
+// CORS настройки - для Railway и localhost
 const corsOptions = {
-  origin: (origin, callback) => {
-    // Разрешаем запросы без origin (например, мобильные приложения, Postman)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      console.log('❌ CORS: Origin не разрешен:', origin);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001', 
+    'https://admin-art24.online',
+    'https://www.admin-art24.online',
+    'https://art24.me',
+    'https://www.art24.me'
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
-  maxAge: 600, // 10 минут кеширования preflight
-  optionsSuccessStatus: 204 // Правильный статус для preflight
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 
-// Явный обработчик OPTIONS для всех путей (важно для Railway + кастомный домен)
-app.options('*', (req, res) => {
-  const origin = req.headers.origin;
-  
-  console.log('🔧 OPTIONS запрос:', {
-    origin,
+// Дополнительный CORS middleware для гарантии
+app.use((req, res, next) => {
+  console.log('🔧 CORS Middleware:', {
+    method: req.method,
+    origin: req.headers.origin,
     path: req.path,
-    method: req.method
+    userAgent: req.headers['user-agent'],
+    referer: req.headers.referer
   });
+
+  // Разрешенные домены
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:3001', 
+    'https://admin-art24.online',
+    'https://www.admin-art24.online',
+    'https://art24.me',
+    'https://www.art24.me'
+  ];
+  
+  const origin = req.headers.origin;
+  console.log('🌐 Проверяем origin:', origin, 'в списке:', allowedOrigins.includes(origin));
   
   if (allowedOrigins.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin');
-    res.header('Access-Control-Max-Age', '600');
-    console.log('✅ OPTIONS: CORS заголовки установлены для', origin);
+    console.log('✅ Origin разрешен:', origin);
   } else {
-    console.log('❌ OPTIONS: Origin не разрешен:', origin);
+    res.header('Access-Control-Allow-Origin', '*');
+    console.log('⚠️ Origin не найден в списке, используем *:', origin);
   }
-  
-  res.sendStatus(204);
-});
 
-// Дополнительный CORS middleware для гарантии (только для логирования)
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  
-  console.log('🔧 CORS Middleware:', {
-    method: req.method,
-    origin,
-    path: req.path,
-    userAgent: req.headers['user-agent']?.substring(0, 50) + '...',
-    referer: req.headers.referer
-  });
-  
-  // Для основных запросов (не OPTIONS) - CORS уже обработан выше
-  if (req.method !== 'OPTIONS') {
-    console.log('🌐 Основной запрос от origin:', origin);
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin');
+  res.header('Access-Control-Allow-Credentials', 'true');
+
+  if (req.method === 'OPTIONS') {
+    console.log('✅ OPTIONS запрос обработан, возвращаем 200');
+    res.sendStatus(200);
+    return;
   }
 
   next();
@@ -195,19 +182,14 @@ app.get('/api', (req, res) => {
 
 // CORS test endpoint
 app.get('/api/cors-test', (req, res) => {
-  const origin = req.headers.origin;
-  const isAllowed = allowedOrigins.includes(origin);
-  
   res.json({
-    message: isAllowed ? 'CORS тест успешен!' : 'CORS тест неудачен!',
-    origin,
-    allowed: isAllowed,
+    message: 'CORS тест успешен!',
+    origin: req.headers.origin,
     timestamp: new Date().toISOString(),
-    allowedOrigins,
     headers: {
       origin: req.headers.origin,
       referer: req.headers.referer,
-      userAgent: req.headers['user-agent']?.substring(0, 50) + '...'
+      userAgent: req.headers['user-agent']
     }
   });
 });

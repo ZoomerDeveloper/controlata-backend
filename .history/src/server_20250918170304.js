@@ -195,19 +195,14 @@ app.get('/api', (req, res) => {
 
 // CORS test endpoint
 app.get('/api/cors-test', (req, res) => {
-  const origin = req.headers.origin;
-  const isAllowed = allowedOrigins.includes(origin);
-  
   res.json({
-    message: isAllowed ? 'CORS тест успешен!' : 'CORS тест неудачен!',
-    origin,
-    allowed: isAllowed,
+    message: 'CORS тест успешен!',
+    origin: req.headers.origin,
     timestamp: new Date().toISOString(),
-    allowedOrigins,
     headers: {
       origin: req.headers.origin,
       referer: req.headers.referer,
-      userAgent: req.headers['user-agent']?.substring(0, 50) + '...'
+      userAgent: req.headers['user-agent']
     }
   });
 });
