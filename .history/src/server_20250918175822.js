@@ -69,10 +69,10 @@ const corsOptions = {
   origin: (origin, callback) => {
     console.log('🔍 CORS Origin check:', { origin, allowedOrigins });
     
-    // Для запросов без origin (например, Postman) - разрешаем
+    // Для запросов без origin (например, Postman) - НЕ разрешаем с credentials
     if (!origin) {
-      console.log('⚠️ CORS: Запрос без origin (Postman/мобильное приложение)');
-      return callback(null, true);
+      console.log('⚠️ CORS: Запрос без origin - отклоняем из-за credentials: true');
+      return callback(new Error('Origin required for credentials'));
     }
     
     if (allowedOrigins.includes(origin)) {
@@ -83,7 +83,7 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: false, // Отключаем credentials, так как фронтенд их не использует
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
   maxAge: 600, // 10 минут кеширования preflight
@@ -104,6 +104,7 @@ app.options('*', (req, res) => {
   
   if (allowedOrigins.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
+    res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin');
     res.header('Access-Control-Max-Age', '600');
@@ -131,6 +132,7 @@ app.use((req, res, next) => {
   // Принудительно устанавливаем правильные CORS заголовки для разрешенных origin
   if (origin && allowedOrigins.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
+    res.header('Access-Control-Allow-Credentials', 'true');
     console.log('✅ CORS: Принудительно установлен origin:', origin);
   } else if (origin) {
     console.log('❌ CORS: Origin не разрешен:', origin);
