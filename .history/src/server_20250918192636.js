@@ -55,7 +55,7 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false
 }));
 
-// CORS настройки - упрощенные для Railway
+// CORS настройки - оптимизированы для Railway с кастомным доменом
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3001', 
@@ -66,9 +66,16 @@ const allowedOrigins = [
 ];
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Разрешаем запросы без origin (например, мобильные приложения, curl)
-    if (!origin || allowedOrigins.includes(origin)) {
+  origin: (origin, callback) => {
+    console.log('🔍 CORS Origin check:', { origin, allowedOrigins });
+    
+    // Для запросов без origin (например, Postman) - разрешаем
+    if (!origin) {
+      console.log('⚠️ CORS: Запрос без origin (Postman/мобильное приложение)');
+      return callback(null, true);
+    }
+    
+    if (allowedOrigins.includes(origin)) {
       console.log('✅ CORS: Origin разрешен:', origin);
       callback(null, true);
     } else {
@@ -76,26 +83,58 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: false,
+  credentials: false, // Отключаем credentials, так как фронтенд их не использует
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
+  maxAge: 600, // 10 минут кеширования preflight
+  optionsSuccessStatus: 204 // Правильный статус для preflight
 };
 
-// CORS ДОЛЖЕН БЫТЬ ПЕРЕД ВСЕМИ МАРШРУТАМИ
 app.use(cors(corsOptions));
 
-// Включаем pre-flight запросы для всех маршрутов
-app.options('*', cors(corsOptions));
+// Явный обработчик OPTIONS для всех путей (важно для Railway + кастомный домен)
+app.options('*', (req, res) => {
+  const origin = req.headers.origin;
+  
+  console.log('🔧 OPTIONS запрос:', {
+    origin,
+    path: req.path,
+    method: req.method
+  });
+  
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin');
+    res.header('Access-Control-Max-Age', '600');
+    console.log('✅ OPTIONS: CORS заголовки установлены для', origin);
+  } else {
+    console.log('❌ OPTIONS: Origin не разрешен:', origin);
+    // Не устанавливаем заголовки для неразрешенных origin
+  }
+  
+  res.sendStatus(204);
+});
 
-// Дополнительный CORS middleware для логирования
+// Дополнительный CORS middleware для принудительной установки правильных заголовков
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   
   console.log('🔧 CORS Middleware:', {
     method: req.method,
     origin,
-    path: req.path
+    path: req.path,
+    userAgent: req.headers['user-agent']?.substring(0, 50) + '...',
+    referer: req.headers.referer
   });
+  
+  // Принудительно устанавливаем правильные CORS заголовки для разрешенных origin
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
+    console.log('✅ CORS: Принудительно установлен origin:', origin);
+  } else if (origin) {
+    console.log('❌ CORS: Origin не разрешен:', origin);
+  }
 
   next();
 });

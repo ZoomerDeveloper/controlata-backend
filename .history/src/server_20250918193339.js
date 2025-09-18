@@ -87,15 +87,25 @@ app.use(cors(corsOptions));
 // Включаем pre-flight запросы для всех маршрутов
 app.options('*', cors(corsOptions));
 
-// Дополнительный CORS middleware для логирования
+// Дополнительный CORS middleware для принудительной установки правильных заголовков
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   
   console.log('🔧 CORS Middleware:', {
     method: req.method,
     origin,
-    path: req.path
+    path: req.path,
+    userAgent: req.headers['user-agent']?.substring(0, 50) + '...',
+    referer: req.headers.referer
   });
+  
+  // Принудительно устанавливаем правильные CORS заголовки для разрешенных origin
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin); // Конкретный домен, НЕ *
+    console.log('✅ CORS: Принудительно установлен origin:', origin);
+  } else if (origin) {
+    console.log('❌ CORS: Origin не разрешен:', origin);
+  }
 
   next();
 });
