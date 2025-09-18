@@ -11,14 +11,12 @@ import {
   Col,
   Statistic,
   Typography,
-  Divider,
   message,
   Input
 } from 'antd';
 import {
   DownloadOutlined,
   ReloadOutlined,
-  FilterOutlined,
   ExportOutlined
 } from '@ant-design/icons';
 import api from '../services/api';
@@ -54,7 +52,6 @@ interface MovementStats {
 
 const WarehouseReportsPage: React.FC = () => {
   const [movements, setMovements] = useState<MaterialMovement[]>([]);
-  const [stats, setStats] = useState<MovementStats | null>(null);
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
     dateRange: null as any,

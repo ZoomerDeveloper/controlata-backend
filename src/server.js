@@ -55,9 +55,15 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false
 }));
 
-// CORS настройки - упрощенные для разработки
+// CORS настройки - для Railway и localhost
 const corsOptions = {
-  origin: true, // Разрешаем все домены для разработки
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001', 
+    'https://admin-art24.online',
+    'https://art24.me',
+    'https://www.art24.me'
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
@@ -75,7 +81,22 @@ app.use((req, res, next) => {
     userAgent: req.headers['user-agent']
   });
   
-  res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
+  // Разрешенные домены
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:3001', 
+    'https://admin-art24.online',
+    'https://art24.me',
+    'https://www.art24.me'
+  ];
+  
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  } else {
+    res.header('Access-Control-Allow-Origin', '*');
+  }
+  
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin');
   res.header('Access-Control-Allow-Credentials', 'true');
@@ -201,9 +222,10 @@ process.on('SIGTERM', async () => {
 const PORT = process.env.PORT || 8080;
 
 // Принудительная версия для обновления CORS
-const CORS_VERSION = 'v3.0.0';
+const CORS_VERSION = 'v4.0.0'; // Updated version for Railway
 console.log(`🚀 Запуск сервера с CORS ${CORS_VERSION}`);
 console.log(`🔧 CORS Proxy доступен по адресу: /cors-proxy`);
+console.log(`🌐 Разрешенные домены: localhost:3000, localhost:3001, admin-art24.online, art24.me`);
 
 app.listen(PORT, () => {
   console.log(`🚀 Сервер запущен на порту ${PORT}`);

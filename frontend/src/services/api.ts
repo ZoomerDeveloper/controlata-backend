@@ -1,10 +1,9 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import { 
   User, 
   PictureSize, 
   Material, 
   MaterialPurchase, 
-  Stock, 
   Order, 
   Picture, 
   Income, 
@@ -27,7 +26,10 @@ class ApiService {
   constructor() {
     // Определяем базовый URL в зависимости от окружения
     const baseURL = process.env.REACT_APP_API_URL || 
-      'https://controlata-production.up.railway.app/api';
+      (process.env.NODE_ENV === 'development' 
+        ? 'http://localhost:8080/api'
+        : 'https://controlata-production.up.railway.app/api'
+      );
     
     console.log('API Base URL:', baseURL);
     
@@ -36,11 +38,8 @@ class ApiService {
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
       },
-      withCredentials: false, // Отключаем credentials для обхода CORS
+      withCredentials: true, // Включаем credentials для localhost
     });
 
     // Добавляем токен к каждому запросу

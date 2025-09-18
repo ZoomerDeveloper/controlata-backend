@@ -17,7 +17,6 @@ import {
   Alert,
   Tabs,
   Typography,
-  Divider,
   Tooltip
 } from 'antd';
 import {
@@ -32,8 +31,6 @@ import {
 import api from '../services/api';
 
 const { Title, Text } = Typography;
-const { TabPane } = Tabs;
-const { Option } = Select;
 
 interface Material {
   id: string;
@@ -83,7 +80,6 @@ const WarehousePage: React.FC = () => {
   const [selectedMaterial, setSelectedMaterial] = useState<Material | null>(null);
   const [movementType, setMovementType] = useState<'add' | 'remove' | 'adjust'>('add');
   const [form] = Form.useForm();
-  const [movementForm] = Form.useForm();
 
   useEffect(() => {
     fetchData();
