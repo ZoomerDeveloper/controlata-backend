@@ -43,7 +43,10 @@ const createOrderSchema = Joi.object({
       pictureId: Joi.string().optional(),
       name: Joi.string().min(1).max(200).optional(),
       pictureSizeId: Joi.string().optional(),
-      photo: Joi.any().optional(),
+      photo: Joi.alternatives().try(
+        Joi.string(),
+        Joi.any().allow(null, undefined)
+      ).optional(),
       imageUrl: Joi.any().optional(),
       workHours: Joi.number().min(0).optional(),
       notes: Joi.string().max(500).optional()
