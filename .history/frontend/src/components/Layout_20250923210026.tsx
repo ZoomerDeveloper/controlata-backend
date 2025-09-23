@@ -43,7 +43,6 @@ const menuItems = [
   { key: '/expenses', icon: <ArrowDownOutlined />, label: 'Расходы' },
   { key: '/reports', icon: <BarChartOutlined />, label: 'Отчеты' },
   { key: '/warehouse-reports', icon: <BarChartOutlined />, label: 'Отчеты склада' },
-  { key: '/notifications', icon: <BellOutlined />, label: 'Уведомления' },
 ];
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

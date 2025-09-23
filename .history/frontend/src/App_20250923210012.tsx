@@ -61,7 +61,6 @@ const AppRoutes: React.FC = () => {
                 <Route path="/incomes" element={<IncomesPage />} />
                 <Route path="/expenses" element={<ExpensesPage />} />
                 <Route path="/reports" element={<ReportsPage />} />
-                <Route path="/notifications" element={<NotificationsPage />} />
               </Routes>
             </Layout>
           </ProtectedRoute>
