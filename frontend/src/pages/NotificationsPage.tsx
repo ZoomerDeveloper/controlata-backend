@@ -14,8 +14,7 @@ import {
   Row,
   Col,
   Statistic,
-  Tabs,
-  Alert
+  Tabs
 } from 'antd';
 import {
   BellOutlined,
@@ -30,7 +29,6 @@ import dayjs from 'dayjs';
 import api from '../services/api';
 
 const { Title, Text } = Typography;
-const { TabPane } = Tabs;
 
 interface Notification {
   id: string;
