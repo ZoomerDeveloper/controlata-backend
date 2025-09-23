@@ -148,10 +148,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           
           <Space>
             <Typography.Text>Art24 - Система управления картинами</Typography.Text>
-          </Space>
-          
-          <Space>
-            <NotificationBell />
             <Dropdown
               menu={{ items: userMenuItems }}
               placement="bottomRight"
