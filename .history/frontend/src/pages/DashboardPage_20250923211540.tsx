@@ -170,8 +170,8 @@ const DashboardPage: React.FC = () => {
             <Space direction="vertical" style={{ width: '100%' }}>
               {stats?.orders?.byStatus?.map((status) => (
                 <div key={status.status} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <Tag color={getOrderStatusColor(status.status)}>
-                    {getOrderStatusLabel(status.status)}
+                  <Tag color={status.status === 'COMPLETED' ? 'success' : 'default'}>
+                    {status.status}
                   </Tag>
                   <Text>{status._count.id} заказов</Text>
                 </div>

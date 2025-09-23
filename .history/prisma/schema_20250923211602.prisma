@@ -125,9 +125,9 @@ model MaterialMovement {
 model Order {
   id          String      @id @default(cuid())
   orderNumber String      @unique
-  customerName String?    // Оставляем для обратной совместимости
-  customerEmail String?   // Оставляем для обратной совместимости
-  customerPhone String?   // Оставляем для обратной совместимости
+  customerName String?
+  customerEmail String?
+  customerPhone String?
   status      OrderStatus @default(PENDING)
   totalPrice  Float       // общая стоимость заказа
   notes       String?
@@ -138,12 +138,10 @@ model Order {
   updatedAt   DateTime    @updatedAt
 
   // Relations
-  userId     String
-  user       User      @relation(fields: [userId], references: [id])
-  customerId String?   // Связь с клиентом (опционально для обратной совместимости)
-  customer   Customer? @relation(fields: [customerId], references: [id])
-  pictures   Picture[]
-  incomes    Income[]
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  pictures  Picture[]
+  incomes   Income[]
 
   @@map("orders")
 }
