@@ -173,9 +173,8 @@ const createOrder = async (req, res) => {
       pictures = []
     } = req.body;
 
-    // Генерируем номер заказа с улучшенной системой нумерации
-    const orderNumberingService = require('../services/orderNumberingService');
-    const finalOrderNumber = orderNumber || await orderNumberingService.generateOrderNumber();
+    // Генерируем номер заказа, если не предоставлен
+    const finalOrderNumber = orderNumber || `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 4).toUpperCase()}`;
 
     // Рассчитываем общую стоимость, если не предоставлена
     let finalTotalPrice = totalPrice || 0;

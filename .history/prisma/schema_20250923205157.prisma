@@ -329,15 +329,3 @@ model Notification {
 
   @@map("notifications")
 }
-
-model AutomationLog {
-  id        String   @id @default(cuid())
-  type      String   // DAILY_TASKS, COST_RECALCULATION, PRICING_UPDATE, etc.
-  status    String   // COMPLETED, FAILED, IN_PROGRESS
-  message   String?
-  data      Json?    // результаты выполнения
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("automation_logs")
-}

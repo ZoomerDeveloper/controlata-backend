@@ -196,7 +196,6 @@ app.use('/api/reports', authMiddleware, reportRoutes);
 app.use('/api/dashboard', authMiddleware, dashboardRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/warehouse', authMiddleware, warehouseRoutes);
-app.use('/api/notifications', notificationRoutes);
 
 // CORS Proxy для обхода ограничений браузера
 app.use('/cors-proxy', corsProxyRoutes);
